@@ -1,0 +1,35 @@
+{
+  "name": "ferretsoftware-clips",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.13.4",
+    "@mantine/dates": "^7.13.4",
+    "@mantine/form": "^7.13.4",
+    "@mantine/hooks": "^7.13.4",
+    "@remixicon/react": "^4.5.0",
+    "@supabase/supabase-js": "^2.46.1",
+    "dayjs": "^1.11.13",
+    "next": "15.0.2",
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.1",
+    "postcss": "^8.4.47",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
+    "sass": "^1.80.4",
+    "typescript": "^5"
+  }
+}

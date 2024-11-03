@@ -1,0 +1,109 @@
+:root {
+  --max-width: 67.5rem;
+
+  --valhalla-gradient: linear-gradient(
+    247deg,
+    hsl(0deg 98% 75%) 0%,
+    hsl(6deg 98% 76%) 29%,
+    hsl(11deg 98% 77%) 43%,
+    hsl(16deg 100% 78%) 57%,
+    hsl(22deg 100% 79%) 71%,
+    hsl(27deg 100% 80%) 100%
+  );
+
+  --shadow-color: 0deg 0% 5%;
+  --shadow-elevation-high:
+    -0.3px 0.3px 0.4px hsl(var(--shadow-color) / 0.54),
+    -0.7px 0.8px 0.9px -0.6px hsl(var(--shadow-color) / 0.48),
+    -1.6px 1.7px 2px -1.2px hsl(var(--shadow-color) / 0.43),
+    -3.2px 3.5px 4.1px -1.8px hsl(var(--shadow-color) / 0.37),
+    -6.1px 6.7px 7.8px -2.4px hsl(var(--shadow-color) / 0.32),
+    -10.8px 11.8px 13.8px -3px hsl(var(--shadow-color) / 0.26),
+    -17.8px 19.4px 22.7px -3.6px hsl(var(--shadow-color) / 0.21),
+    -27.5px 30px 35.1px -4.2px hsl(var(--shadow-color) / 0.15);
+}
+
+:root[data-mantine-color-scheme="light"] {
+  --mantine-color-body: #fef5f1 !important;
+}
+
+:root[data-mantine-color-scheme="dark"] {
+  --mantine-color-body: #1d1815;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: var(--mantine-color-brown-7);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Headers + Text ----- */
+
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+  margin-bottom: 1.25em;
+}
+
+.title {
+  font-size: var(--mantine-h1-font-size);
+  font-weight: var(--mantine-h1-font-weight);
+  margin-block: 0.7em;
+}
+
+.sub-title {
+  font-size: var(--mantine-h2-font-size);
+  font-weight: var(--mantine-h2-font-weight);
+  margin-block: 0.85em;
+}
+
+/* Page Layout ----- */
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  isolation: isolate;
+}
+
+.main {
+  flex: 1;
+  padding-left: var(--mantine-spacing-xl);
+  padding-right: var(--mantine-spacing-xl);
+}

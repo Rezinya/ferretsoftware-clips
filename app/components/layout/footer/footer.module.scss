@@ -1,0 +1,10 @@
+.footer {
+  font-size: var(--mantine-font-size-xs);
+  width: 100%;
+  padding-inline: var(--mantine-spacing-xl);
+  padding-block: 5rem var(--mantine-spacing-md);
+
+  &-line {
+    margin-bottom: 0;
+  }
+}
