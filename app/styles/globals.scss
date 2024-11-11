@@ -1,6 +1,8 @@
 :root {
   --max-width: 67.5rem;
 
+  --color-red: #fe8483;
+
   --valhalla-gradient: linear-gradient(
     247deg,
     hsl(0deg 98% 75%) 0%,
@@ -24,7 +26,7 @@
 }
 
 :root[data-mantine-color-scheme="light"] {
-  --mantine-color-body: #fef5f1 !important;
+  --mantine-color-body: #fef5f1;
 }
 
 :root[data-mantine-color-scheme="dark"] {
@@ -82,7 +84,7 @@ p {
 .title {
   font-size: var(--mantine-h1-font-size);
   font-weight: var(--mantine-h1-font-weight);
-  margin-block: 0.7em;
+  margin-block: 0.4em 0.7em;
 }
 
 .sub-title {
@@ -103,7 +105,29 @@ p {
 }
 
 .main {
-  flex: 1;
+  align-self: stretch;
   padding-left: var(--mantine-spacing-xl);
   padding-right: var(--mantine-spacing-xl);
+}
+
+.error {
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &-title {
+    font-size: var(--mantine-h2-font-size);
+    font-weight: var(--mantine-h2-font-weight);
+    margin-block: 0.85em;
+  }
+
+  &-text{
+    color: var(--mantine-color-gray-7);
+  }
+
+  &-button {
+    margin-block: var(--mantine-spacing-md);
+  }
 }

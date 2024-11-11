@@ -1,9 +1,10 @@
 "use client";
 
 import { ActionIcon, useMantineColorScheme, useComputedColorScheme, Tooltip } from "@mantine/core";
+
 import { RiMoonClearLine, RiSunLine } from "@remixicon/react";
 
-export default function ColorSchemeToggle({ size, radius }: {
+export default function ColorSchemeButton({ size, radius }: {
   size: string,
   radius: string
 }) {
@@ -13,7 +14,7 @@ export default function ColorSchemeToggle({ size, radius }: {
   return (
     <ActionIcon
       onClick={ () => setColorScheme(computedColorScheme === "light" ? "dark" : "light") }
-      variant="subtle"
+      variant="light"
       size={size}
       radius={radius}
       aria-label="Toggle color scheme"

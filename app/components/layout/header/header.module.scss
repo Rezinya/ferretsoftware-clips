@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  border-bottom: 1px solid var(--mantine-color-brown-9);
+  margin-block: 0 var(--mantine-spacing-xl);
   padding-inline: var(--mantine-spacing-xl);
   padding-block: 0.4rem;
 }
@@ -13,8 +15,7 @@
   text-decoration: none;
 
   &-text {
-    font-size: var(--mantine-font-size-lg);
-    font-weight: 600;
+    font-size: var(--mantine-font-size-xl);
     padding-inline: var(--mantine-font-size-xs);
   }
 }
@@ -45,6 +46,12 @@
     font-weight: 600;
     color: var(--mantine-color-brown-7);
     text-decoration: none;
+
+    &-active {
+      font-weight: 600;
+      color: var(--mantine-color-text);
+      text-decoration: none;
+    }
   }
 
   &-buttons {

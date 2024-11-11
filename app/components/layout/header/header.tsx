@@ -1,40 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { shantell } from "../fonts";
-import GitHubButton from "./githubButton";
-import ColorSchemeToggle from "./colorSchemeToggle";
-import styles from "./header.module.scss";
+import { handwrittenFont } from "../fonts";
+import NavLink from "./navLink";
+import GitHubButton from "./buttonGitHub";
+import ColorSchemeButton from "./buttonColorScheme";
+import classes from "./header.module.scss";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
-      <Link href="/" className={styles.title}>
+    <header className={classes.header}>
+      <Link href="/" className={classes.title}>
         <Image
-          src="/mug-shots/placeholder.webp"
+          src="/ferretsoftware-clips.png"
           width={42}
           height={42}
           alt="FerretSoftware Clips"
         />
-        <div className={`${styles["title-text"]} ${shantell.className}`}>FerretSoftware Clips</div>
+        <div className={`${classes["title-text"]} ${handwrittenFont.className}`}>FerretSoftware Clips</div>
       </Link>
 
-      <nav className={styles.nav}>
-        <ul className={styles["nav-list"]}>
-        <li className={styles["nav-item"]}>
-            <Link href="/" className={styles["nav-link"]}>Search</Link>
+      <nav className={classes.nav}>
+        <ul className={classes["nav-list"]}>
+        <li className={classes["nav-item"]}>
+            <NavLink path="/search" label="Search" />
           </li>
-          <li className={styles["nav-item"]}>
-            <Link href="/ferrets" className={styles["nav-link"]}>Ferrets</Link>
+          <li className={classes["nav-item"]}>
+            <NavLink path="/ferrets" label="Ferrets" />
           </li>
-          <li className={styles["nav-item"]}>
-            <Link href="/about" className={styles["nav-link"]}>About</Link>
+          <li className={classes["nav-item"]}>
+            <NavLink path="/about" label="About" />
           </li>
         </ul>
 
-        <div className={styles["nav-buttons"]}>
+        <div className={classes["nav-buttons"]}>
           <GitHubButton link="https://github.com/Rezinya/ferretsoftware-clips" size="lg" radius="sm" />
-          <ColorSchemeToggle size="lg" radius="sm"  />
+          <ColorSchemeButton size="lg" radius="sm"  />
         </div>
       </nav>
     </header>

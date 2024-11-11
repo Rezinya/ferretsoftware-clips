@@ -2,21 +2,22 @@
 
 import Link from "next/link";
 import Image from "next/image";
+
 import { ActionIcon, Tooltip } from "@mantine/core";
 
-import { ConvertSizeToPx } from "@/app/utils/fontSize";
+import { convertSizeToPx } from "@/app/utils/fontSize";
 
 export default function GitHubButton({ link, size, radius }: {
   link: string,
   size: string,
   radius: string
 }) {
-  const pxSize = ConvertSizeToPx({size});
+  const pxSize = convertSizeToPx({size});
 
   return (
     <ActionIcon
       component={Link}
-      variant="subtle"
+      variant="light"
       href={link}
       size={size}
       radius={radius}
@@ -27,7 +28,7 @@ export default function GitHubButton({ link, size, radius }: {
         transitionProps={{ transition: "pop", duration: 300 }}
       >
         <Image
-          src="/github-mark.png"
+          src="/github-mark-white.png"
           width={pxSize}
           height={pxSize}
           alt="GitHub"
