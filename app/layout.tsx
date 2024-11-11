@@ -1,6 +1,8 @@
 import { Metadata } from "next";
+
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import '@mantine/dates/styles.css';
 
 import { theme } from "./components/layout/theme";
 import Header from "./components/layout/header/header";
@@ -12,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | FerretSoftware Clips",
     default: "FerretSoftware Clips",
   },
-  description: "Advanced search tool for Twitch clips from FerretSoftware, including filtering by playgroup and ferret(s)!",
+  description: "An advanced search tool for Twitch clips from FerretSoftware, including filtering by playgroup and ferret(s)!",
 };
 
 export default function RootLayout({

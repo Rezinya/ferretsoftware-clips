@@ -23,6 +23,9 @@
 # misc
 .DS_Store
 *.pem
+/app/assets/mugshots/originals/
+/scripts/accessToken.txt
+/scripts/clientId.txt
 
 # debug
 npm-debug.log*

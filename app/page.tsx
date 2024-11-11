@@ -1,11 +1,10 @@
-import { Metadata } from "next";
+import { Button, Title } from "@mantine/core";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div >
-      <main>
-        <h2>Welcome!</h2>
-      </main>
+    <div>
+      <Title order={2}>Welcome!</Title>
     </div>
   );
 }

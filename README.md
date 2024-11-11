@@ -1,51 +1,62 @@
+<div align="center">
 ![FerretSoftware-Clips](image)
 
-<div align="center">
 A Twitch Clip search tool, exclusively for the [FerretSoftware channel](https://www.twitch.tv/ferretsoftware). Search and filter by playgroups and ferret(s)!
 </div>
 
-Built with:
+### Built with
+
 - [Next.js](https://nextjs.org/)
 - [Mantine](https://mantine.dev/)
 - [SASS](https://sass-lang.com/)
 - [Remix Icon](https://remixicon.com/)
-- TypeScript
-
----
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+- [TypeScript](https://www.typescriptlang.org/)
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, please follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Here is what you need to be able to run FerretSoftware Clips:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js (Version: >=18.x)
+- Pnpm *(recommended)*
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+### Setup
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repo into a public GitHub repository (or fork https://github.com/Rezinya/ferretsoftware-clips/fork).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```sh
+  git clone https://github.com/Rezinya/ferretsoftware-clips.git
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Go to the project folder
 
-## Deploy on Vercel
+  ```sh
+  cd jsoncrack.com
+  ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Install packages with pnpm
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  ```sh
+  pnpm install
+  ```
+
+4. Run the project
+
+  ```sh
+  pnpm dev
+
+  # Running on http://localhost:3000/
+  ```
+
+## Other Ways to Contribute
+
+The filter system is currently a work in progress! 
+
+## Licenses
+
+All photos of the ferrets are copyrights of [FerretSoftware](https://www.twitch.tv/ferretsoftware) / [PirateSoftware](https://www.twitch.tv/piratesoftware) and are available under [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/).
