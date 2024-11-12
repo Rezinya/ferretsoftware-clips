@@ -1,6 +1,6 @@
 <div align="center">
 ![FerretSoftware-Clips](image)
-
+<br>
 A Twitch Clip search tool, exclusively for the [FerretSoftware channel](https://www.twitch.tv/ferretsoftware). Search and filter by playgroups and ferret(s)!
 </div>
 
@@ -36,7 +36,7 @@ Here is what you need to be able to run FerretSoftware Clips:
 2. Go to the project folder
 
   ```sh
-  cd jsoncrack.com
+  cd ferretsoftware-clips
   ```
 
 3. Install packages with pnpm
