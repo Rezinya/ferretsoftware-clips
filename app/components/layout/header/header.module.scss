@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid var(--mantine-color-brown-9);
   margin-block: 0 var(--mantine-spacing-xl);
   padding-inline: var(--mantine-spacing-xl);
   padding-block: 0.4rem;
@@ -11,12 +10,16 @@
 .title {
   display: flex;
   align-items: center;
-  color: var(--mantine-color-brown-8);
+  color: var(--mantine-color-custom-7);
   text-decoration: none;
 
   &-text {
     font-size: var(--mantine-font-size-xl);
     padding-inline: var(--mantine-font-size-xs);
+
+    &:hover {
+      color: var(--mantine-color-custom-8);
+    }
   }
 }
 
@@ -35,22 +38,21 @@
   &-item {
     padding-inline: var(--mantine-spacing-md);
     padding-block: 0.3rem;
-
-    &:hover {
-      background-color: rgba(199, 173, 156, 0.15);
-      border-radius: var(--mantine-radius-sm);
-    }
   }
 
   &-link {
     font-weight: 600;
-    color: var(--mantine-color-brown-7);
+    color: var(--mantine-color-custom-7);
     text-decoration: none;
 
     &-active {
       font-weight: 600;
       color: var(--mantine-color-text);
       text-decoration: none;
+    }
+
+    &:hover {
+      color: var(--mantine-color-custom-8);
     }
   }
 

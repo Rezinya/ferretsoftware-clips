@@ -1,8 +1,6 @@
 :root {
   --max-width: 67.5rem;
 
-  --color-red: #fe8483;
-
   --valhalla-gradient: linear-gradient(
     247deg,
     hsl(0deg 98% 75%) 0%,
@@ -59,7 +57,7 @@ input, button, textarea, select {
 }
 
 a {
-  color: var(--mantine-color-brown-7);
+  color: var(--mantine-color-custom-7);
 
   &:hover {
     text-decoration: none;
@@ -120,6 +118,7 @@ p {
   &-title {
     font-size: var(--mantine-h2-font-size);
     font-weight: var(--mantine-h2-font-weight);
+    color: var(--mantine-color-custom-1);
     margin-block: 0.85em;
   }
 

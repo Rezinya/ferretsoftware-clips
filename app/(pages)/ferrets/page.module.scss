@@ -1,0 +1,37 @@
+.sub-title {
+  &-link {
+    color: var(--mantine-color-text);
+    text-decoration: none;
+  }
+}
+
+.mark {
+  color: var(--mantine-color-custom-1);
+}
+
+.grid,
+.grid-valhalla {
+  display: flex;
+  margin: 0 auto;
+  padding-block: var(--mantine-spacing-md) 3rem;
+}
+
+.grid ul {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: var(--mantine-spacing-xl);
+  list-style: none;
+  padding: 0;
+}
+
+.grid-valhalla ul {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: var(--mantine-spacing-xl);
+  list-style: none;
+  padding: 0;
+}

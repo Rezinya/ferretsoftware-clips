@@ -1,0 +1,63 @@
+.film {
+  width: 220px;
+  height: 270px;
+  background-color: var(--mantine-color-custom-0);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  &-link {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--mantine-color-gray-7);
+    text-decoration: none;
+  }
+
+  &-image {
+    border: 3px solid var(--mantine-color-black);
+    margin-top: 15px;
+  }
+
+  &:hover {
+    animation: tilt-shaking 0.3s;
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+  width: 100%;
+  padding-bottom: 10px;
+
+  &-name {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+
+.mark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
+  background-image: radial-gradient(circle, rgba(204,98,97,0.3) 0%, rgba(217,157,106,0.25) 100%);
+  border-radius: var(--mantine-radius-lg);
+  padding: 0.25rem;
+  margin: 0.5rem 1.5rem;
+
+  &-rainbow {
+    height: 20px;
+  }
+}
+
+@keyframes tilt-shaking {
+  0%    { transform: rotate(0deg); }
+  25%   { transform: rotate(5deg); }
+  50%   { transform: rotate(0eg); }
+  75%   { transform: rotate(-5deg); }
+  100%  { transform: rotate(0deg); }
+}

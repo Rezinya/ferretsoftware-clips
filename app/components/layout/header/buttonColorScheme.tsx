@@ -1,8 +1,7 @@
 "use client";
 
 import { ActionIcon, useMantineColorScheme, useComputedColorScheme, Tooltip } from "@mantine/core";
-
-import { RiMoonClearLine, RiSunLine } from "@remixicon/react";
+import { RiMoonClearFill, RiSunFill } from "@remixicon/react";
 
 export default function ColorSchemeButton({ size, radius }: {
   size: string,
@@ -14,7 +13,7 @@ export default function ColorSchemeButton({ size, radius }: {
   return (
     <ActionIcon
       onClick={ () => setColorScheme(computedColorScheme === "light" ? "dark" : "light") }
-      variant="light"
+      variant="outline"
       size={size}
       radius={radius}
       aria-label="Toggle color scheme"
@@ -22,16 +21,16 @@ export default function ColorSchemeButton({ size, radius }: {
       {computedColorScheme === "light" ? (
         <Tooltip
           label="Dark mode"
-          transitionProps={{ transition: "pop", duration: 300 }}
+          transitionProps={{ transition: "pop", duration: 500 }}
         >
-          <RiMoonClearLine />
+          <RiMoonClearFill color="var(--mantine-color-text)" />
         </Tooltip>
       ) : (
         <Tooltip
           label="Light mode"
-          transitionProps={{ transition: "pop", duration: 300 }}
+          transitionProps={{ transition: "pop", duration: 500 }}
         >
-          <RiSunLine />
+          <RiSunFill color="var(--mantine-color-custom-3)" />
         </Tooltip>
       )}
     </ActionIcon>

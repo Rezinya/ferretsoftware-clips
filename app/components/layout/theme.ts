@@ -12,44 +12,44 @@ import {
   Input
 } from "@mantine/core";
 
-import { bodyFont, titleFont } from "./fonts";
+import { bodyFont, titleFont } from "components/layout/fonts";
 
-const brown: MantineColorsTuple = [
+const custom: MantineColorsTuple = [
   "#fdf3ed",
-  "#efe5e0",
-  "#dbcac0",
-  "#c7ad9d",
-  "#b6947f",
-  "#ac846c",
-  "#a87c61",
+  "#fe8483", /* red    */
+  "#ffc798", /* orange */
+  "#ffe7c5", /* yellow */
+  "#b0d94d", /* green  */
+  "#48aed4", /* blue   */
+  "#7354de", /* purple */
   "#936950",
   "#845d45",
   "#754f38"
 ];
 
-/* Override variants as it still defaults to blue */
+// Override variants as it still defaults to blue
 const variantColorResolver: VariantColorsResolver = (input) => {
   const defaultResolvedColors = defaultVariantColorsResolver(input);
   const parsedColor = parseThemeColor({
     color: input.color || input.theme.primaryColor,
     theme: input.theme,
   });
-
+  
   if (input.variant === "light") {
     return {
-      background: "var(--mantine-color-body)",
-      hover: "rgba(199, 173, 156, 0.15)",
-      color: "var(--mantine-color-brown-6)",
-      border: `${rem(1)} solid var(--mantine-color-brown-8)`
+      background: "rgba(147, 105, 80, 0.15)",
+      hover: "rgba(147, 105, 80, 0.15)",
+      color: "var(--mantine-color-custom-7)",
+      border: "0"
     };
   }
 
-  if (input.variant === "subtle") {
+  if (input.variant === "outline") {
     return {
-      background: "transparent",
-      hover: "rgba(199, 173, 156, 0.15)",
-      color: "var(--mantine-color-brown-6)",
-      border: "0"
+      background: "var(--mantine-color-body)",
+      hover: "rgba(147, 105, 80, 0.15)",
+      color: "var(--mantine-color-custom-7)",
+      border: `${rem(1)} solid var(--mantine-color-custom-8)`
     };
   }
 
@@ -59,7 +59,7 @@ const variantColorResolver: VariantColorsResolver = (input) => {
 const themeOverride = createTheme({
   white: "#fef5f1",
   black: "#1d1815",
-  colors: { brown },
+  colors: { custom },
   primaryShade: 7,
   variantColorResolver: variantColorResolver,
   fontFamily: bodyFont.style.fontFamily,
