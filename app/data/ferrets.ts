@@ -1,4 +1,4 @@
-import { Nullable, DateString } from "./types";
+import { Nullable, DateString } from "data/types";
 
 export const playgroups = [
   "GenPop",
