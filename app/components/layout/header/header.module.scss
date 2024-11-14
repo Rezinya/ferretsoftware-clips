@@ -1,10 +1,13 @@
+.wrapper {
+  width: 100%;
+  background: var(--menu-background);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  margin-block: 0 var(--mantine-spacing-xl);
-  padding-inline: var(--mantine-spacing-xl);
-  padding-block: 0.4rem;
+  margin: auto;
+  padding: 0.4rem var(--mantine-spacing-xl);
 }
 
 .title {

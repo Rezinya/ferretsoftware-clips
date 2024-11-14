@@ -16,7 +16,7 @@ export default function GitHubButton({ link, size, radius }: {
   return (
     <ActionIcon
       component={Link}
-      variant="outline"
+      variant="blank"
       href={link}
       size={size}
       radius={radius}

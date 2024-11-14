@@ -1,3 +1,7 @@
+.playgroup-wrapper {
+  margin: var(--mantine-spacing-lg) 0;
+}
+
 .sub-title {
   &-link {
     color: var(--mantine-color-text);
@@ -6,32 +10,24 @@
 }
 
 .mark {
-  color: var(--mantine-color-custom-1);
+  color: var(--mantine-color-custom-0);
 }
 
 .grid,
 .grid-valhalla {
   display: flex;
-  margin: 0 auto;
-  padding-block: var(--mantine-spacing-md) 3rem;
-}
-
-.grid ul {
-  display: flex;
-  width: 100%;
   flex-flow: row wrap;
   justify-content: center;
-  gap: var(--mantine-spacing-xl);
-  list-style: none;
-  padding: 0;
-}
 
-.grid-valhalla ul {
-  display: flex;
-  width: 100%;
-  flex-flow: row wrap;
-  justify-content: center;
-  gap: var(--mantine-spacing-xl);
-  list-style: none;
-  padding: 0;
+  @media (max-width: 500px) {
+    gap: var(--mantine-spacing-xs);
+  }
+
+  @media (min-width: 500px) {
+    gap: var(--mantine-spacing-md);
+  }
+
+  @media (min-width: 1080px) {
+    gap: var(--mantine-spacing-lg);
+  }
 }

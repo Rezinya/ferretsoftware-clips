@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Title } from "@mantine/core";
+import { Alert, Title } from "@mantine/core";
+import { RiListCheck } from "@remixicon/react";
 
 import classes from "pages/about/page.module.scss";
 
@@ -17,9 +18,9 @@ export default function AboutPage() {
 
       <Title order={2} className="sub-title">Possible Features to Add</Title>
 
-      <ul>
+      <ul className={classes.list}>
         <li>Allow Twitch users to log in to the site and add clips to their Favorites
-          <ul>
+          <ul className={classes.list}>
             <li>Sort clips by favorite</li>
           </ul>
         </li>

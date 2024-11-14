@@ -1,10 +1,19 @@
+.wrapper {
+  flex-shrink: 0;
+  width: 100%;
+  background: var(--menu-background);
+}
+
 .footer {
   font-size: var(--mantine-font-size-xs);
-  width: 100%;
-  padding-inline: var(--mantine-spacing-xl);
-  padding-block: 5rem var(--mantine-spacing-md);
+  margin: auto;
+  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
 
   &-text {
     margin-bottom: 0.3em;
+  }
+
+  &-link {
+    color: var(--mantine-color-custom-7);
   }
 }

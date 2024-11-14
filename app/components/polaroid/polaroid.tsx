@@ -41,17 +41,19 @@ export default function Polaroid({ name, sex, valhallaDate }: {
       {/* Extra div for Valhalla ferrets */}
       {valhallaDate !== null ? (
         <div className={styles.mark}>
-          <span className={handwrittenFont.className}>
-            {valhallaDate}
-          </span>
-          <span className={styles["mark-rainbow"]}>
-            <Image
-              src="/rainbow.png"
-              width={36}
-              height={20}
-              alt="rainbow"
-            />
-          </span>
+          <div className={styles["mark-box"]}>
+            <span className={`${handwrittenFont.className} mark-label`}>
+              {valhallaDate}
+            </span>
+            <span className={styles["mark-rainbow"]}>
+              <Image
+                src="/rainbow.png"
+                width={36}
+                height={20}
+                alt="rainbow"
+              />
+            </span>
+          </div>
         </div>
       ) : (
         null
