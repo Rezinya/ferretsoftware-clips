@@ -1,0 +1,18 @@
+/* TextInput ----- */
+
+.textinput {
+  transition: none;
+  background-color: light-dark(var(--mantine-color-brown-0), var(--mantine-color-custom-9));
+  border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
+
+  &:focus-within {
+    outline: 1px solid var(--mantine-color-custom-7);
+    border-color: transparent;
+  }
+}
+
+/* Alert ----- */
+
+.alerttitle {
+  font-size: var(--mantine-font-size-md);
+}
