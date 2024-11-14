@@ -9,22 +9,38 @@ import {
   defaultVariantColorsResolver,
   parseThemeColor,
   rem,
-  Input
+  Input,
+  Alert
 } from "@mantine/core";
 
 import { bodyFont, titleFont } from "components/layout/fonts";
+import classes from "styles/mantine.module.scss";
 
+const brown: MantineColorsTuple = [
+  "#fbf8f3",
+  "#e1d6cb",
+  "#c8b3a3",
+  "#ae8e7a",
+  "#966e5a",
+  "#825745",
+  "#704a38",
+  "#61402e",
+  "#523423",
+  "#432919"
+];
+
+// Based on the colors on the Snails' House logo
 const custom: MantineColorsTuple = [
-  "#fdf3ed",
-  "#fe8483", /* red    */
-  "#ffc798", /* orange */
-  "#ffe7c5", /* yellow */
-  "#b0d94d", /* green  */
-  "#48aed4", /* blue   */
-  "#7354de", /* purple */
-  "#936950",
-  "#845d45",
-  "#754f38"
+  "#ff8281",  /* red    */
+  "#ffc798",  /* orange */
+  "#ffe7c5",  /* yellow */
+  "#b0d94d",  /* green  */
+  "#4adcc5",  /* teal   */
+  "#4ab1d4",  /* blue   */
+  "#7354de",  /* purple */
+  "#644e44",  /* brown-greys */
+  "#4d3c33",
+  "#382b23"
 ];
 
 // Override variants as it still defaults to blue
@@ -48,8 +64,17 @@ const variantColorResolver: VariantColorsResolver = (input) => {
     return {
       background: "var(--mantine-color-body)",
       hover: "rgba(147, 105, 80, 0.15)",
-      color: "var(--mantine-color-custom-7)",
-      border: `${rem(1)} solid var(--mantine-color-custom-8)`
+      color: "var(--mantine-color-brown-6)",
+      border: `${rem(1)} solid var(--mantine-color-brown-7)`
+    };
+  }
+
+  if (input.variant === "blank") {
+    return {
+      background: "transparent",
+      hover: "transparent",
+      color: "transparent",
+      border: "0"
     };
   }
 
@@ -57,14 +82,35 @@ const variantColorResolver: VariantColorsResolver = (input) => {
 }
 
 const themeOverride = createTheme({
-  white: "#fef5f1",
-  black: "#1d1815",
-  colors: { custom },
-  primaryShade: 7,
+  white: "#fcf9f5",
+  black: "#1a0d08",
+  colors: {
+    brown,
+    custom
+  },
+  primaryColor: "brown",
+  primaryShade: 6,
   variantColorResolver: variantColorResolver,
+  defaultGradient: {
+    from: "#ff8281",
+    to: "#ffc798",
+    deg: 70,
+  },
   fontFamily: bodyFont.style.fontFamily,
   headings: {
     fontFamily: `${titleFont.style.fontFamily}, ${DEFAULT_THEME.fontFamily}`
+  },
+  components: {
+    Alert: Alert.extend({
+      classNames: {
+        title: classes.alerttitle
+      }
+    }),
+    Input: Input.extend({
+      classNames: {
+        input: classes.textinput
+      }
+    }),
   },
 });
 

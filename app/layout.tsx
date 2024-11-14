@@ -31,13 +31,13 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider theme={theme} defaultColorScheme="dark">
-          <div className="page-container">
-            <Header />
+          <Header />
+          <div className="page-container max-content-width">
             <main className="main">
               {children}
             </main>
-            <Footer />
           </div>
+          <Footer />
         </MantineProvider>
       </body>
     </html>

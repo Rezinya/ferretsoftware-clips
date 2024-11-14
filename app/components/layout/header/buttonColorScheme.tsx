@@ -13,7 +13,7 @@ export default function ColorSchemeButton({ size, radius }: {
   return (
     <ActionIcon
       onClick={ () => setColorScheme(computedColorScheme === "light" ? "dark" : "light") }
-      variant="outline"
+      variant="blank"
       size={size}
       radius={radius}
       aria-label="Toggle color scheme"
@@ -30,7 +30,7 @@ export default function ColorSchemeButton({ size, radius }: {
           label="Light mode"
           transitionProps={{ transition: "pop", duration: 500 }}
         >
-          <RiSunFill color="var(--mantine-color-custom-3)" />
+          <RiSunFill color="var(--mantine-color-custom-2)" />
         </Tooltip>
       )}
     </ActionIcon>

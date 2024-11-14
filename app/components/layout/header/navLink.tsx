@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-import styles from "./header.module.scss";
+import classes from "components/layout/header/header.module.scss";
 
 interface Props {
   path: string;
@@ -13,7 +12,7 @@ interface Props {
 export default function NavLink({ path, label }: Props) {
   const pathname = usePathname();
   const isActive = pathname === path;
-  const className = isActive ? `${styles["nav-link-active"]}` : `${styles["nav-link"]}`
+  const className = isActive ? `${classes["nav-link-active"]}` : `${classes["nav-link"]}`
 
   return (
     <Link

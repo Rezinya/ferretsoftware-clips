@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+*.wikitext
 /app/assets/mugshots/originals/
 /scripts/accessToken.txt
 /scripts/clientId.txt
