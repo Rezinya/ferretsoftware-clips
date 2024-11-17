@@ -1,3 +1,21 @@
+/* Alert ----- */
+
+.alerttitle {
+  font-size: var(--mantine-font-size-md);
+}
+
+/* Blockquote ----- */
+
+.blockquoteroot {
+  padding: 1.4rem 1.8rem;
+}
+
+/* Card ----- */
+
+.cardroot {
+  border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
+}
+
 /* TextInput ----- */
 
 .textinput {
@@ -9,10 +27,4 @@
     outline: 1px solid var(--mantine-color-custom-7);
     border-color: transparent;
   }
-}
-
-/* Alert ----- */
-
-.alerttitle {
-  font-size: var(--mantine-font-size-md);
 }

@@ -1,4 +1,5 @@
 import { Nullable, DateString } from "data/types";
+import { getSortedFerretNames, sortFerrets } from "utils/arrayHelpers";
 
 export const playgroups = [
   "GenPop",
@@ -389,3 +390,7 @@ export const ferrets: Ferret[] = [
     valhallaDate: null,
   },
 ];
+
+export const sortedFerrets = sortFerrets(ferrets);
+
+export const sortedFerretNames = getSortedFerretNames();

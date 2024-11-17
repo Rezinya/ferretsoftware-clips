@@ -2,7 +2,8 @@
   --min-width: 18.75rem;
   --max-width: 67.5rem;
 
-  --menu-background: rgba(67, 55, 48, 0.3);
+  --background-menu: rgba(67, 55, 48, 0.3);
+  --background-brown-light: rgba(147, 105, 80, 0.15);
 
   --valhalla-gradient: linear-gradient(
     85deg,
@@ -79,13 +80,13 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   text-wrap: pretty;
-  margin-bottom: 1.25em;
+  margin-bottom: var(--mantine-spacing-md);
 }
 
 .title {
   font-size: var(--mantine-h1-font-size);
   font-weight: var(--mantine-h1-font-weight);
-  margin-block: 0.4em 0.7em;
+  margin-block: 0.5em 0.7em;
 }
 
 .sub-title {
