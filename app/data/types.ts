@@ -10,3 +10,5 @@ type DateStringDay = `${0}${OneToNine}` | `${1 | 2}${ZeroToNine}` | `3${0 | 1}`;
 export type Nullable<T> = T | null;
 
 export type DateString = `${DateStringYear}-${DateStringMonth}-${DateStringDay}`;
+
+export type Sort = "default" | "date";

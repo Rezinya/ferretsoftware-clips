@@ -10,7 +10,8 @@ import {
   parseThemeColor,
   rem,
   Input,
-  Alert
+  Card,
+  Blockquote
 } from "@mantine/core";
 
 import { bodyFont, titleFont } from "components/layout/fonts";
@@ -53,8 +54,8 @@ const variantColorResolver: VariantColorsResolver = (input) => {
   
   if (input.variant === "light") {
     return {
-      background: "rgba(147, 105, 80, 0.15)",
-      hover: "rgba(147, 105, 80, 0.15)",
+      background: "var(--background-brown-light)",
+      hover: "var(--background-brown-light)",
       color: "var(--mantine-color-custom-7)",
       border: "0"
     };
@@ -63,7 +64,7 @@ const variantColorResolver: VariantColorsResolver = (input) => {
   if (input.variant === "outline") {
     return {
       background: "var(--mantine-color-body)",
-      hover: "rgba(147, 105, 80, 0.15)",
+      hover: "var(--background-brown-light)",
       color: "var(--mantine-color-brown-6)",
       border: `${rem(1)} solid var(--mantine-color-brown-7)`
     };
@@ -101,14 +102,19 @@ const themeOverride = createTheme({
     fontFamily: `${titleFont.style.fontFamily}, ${DEFAULT_THEME.fontFamily}`
   },
   components: {
-    Alert: Alert.extend({
-      classNames: {
-        title: classes.alerttitle
-      }
-    }),
     Input: Input.extend({
       classNames: {
         input: classes.textinput
+      }
+    }),
+    Card: Card.extend({
+      classNames: {
+        root: classes.cardroot
+      }
+    }),
+    Blockquote: Blockquote.extend({
+      classNames: {
+        root: classes.blockquoteroot
       }
     }),
   },

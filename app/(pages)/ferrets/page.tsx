@@ -2,8 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { Title } from "@mantine/core";
 
-import { ferrets, playgroups } from "data/ferrets";
-import { groupBy } from "utils/arrayHelpers";
+import { sortedFerrets, playgroups } from "data/ferrets";
 import Polaroid from "components/polaroid/polaroid";
 import classes from "pages/ferrets/page.module.scss";
 
@@ -12,25 +11,12 @@ export const metadata: Metadata = {
 }
 
 export default function FerretsPage() {
-  // Ferrets are sorted by playgroup then name (alphabetically)
-  const groupedFerrets = groupBy(ferrets, x => x.playgroup);
-
-  playgroups.map(playgroup => {
-    groupedFerrets.get(playgroup)?.sort((a, b) => {
-      return (a.name.localeCompare(b.name));
-    });
-  });
-
-  // Valhalla residents are sorted the date of their passing in ascending order
-  groupedFerrets.get("Valhalla")?.sort((a, b) => {
-    return ("" + a.valhallaDate).localeCompare("" + b.valhallaDate);
-  });
-
   return (
     <>
       <Title order={1} className="title">Ferrets by Playgroup
         <span className={classes.mark}>*</span>
       </Title>
+      
       <p>
         <span className={classes.mark}>* </span>
         With the exception of a few specific ferrets, being put into a playgroup does not mean that they will never interact with ferrets from other playgroups.
@@ -52,7 +38,7 @@ export default function FerretsPage() {
               classes["grid"] )}
             key={`${playgroup}-grid`}
           >
-            {groupedFerrets.get(playgroup)?.map(ferret => (
+            {sortedFerrets.get(playgroup)?.map(ferret => (
               <Polaroid name={ferret.name} sex={ferret.sex} valhallaDate={ferret.valhallaDate} key={ferret.name} />
             ))}
           </div>
