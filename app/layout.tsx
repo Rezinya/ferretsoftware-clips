@@ -4,9 +4,9 @@ import "@mantine/core/styles.css";
 import '@mantine/charts/styles.css';
 import '@mantine/dates/styles.css';
 
-import { theme } from "components/layout/theme";
-import Header from "components/layout/header/header";
-import Footer from "components/layout/footer/footer";
+import { theme } from "components/Layout/theme";
+import Header from "components/Layout/Header/Header";
+import Footer from "components/Layout/Footer/Footer";
 import "styles/globals.scss";
 
 export const metadata: Metadata = {

@@ -1,5 +1,5 @@
 import { Paper, Text } from "@mantine/core";
-import classes from "components/layout/homepage/home.module.scss";
+import classes from "components/Layout/Home/Home.module.scss";
 
 export default function StatsSummary() {
   return (
