@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { handwrittenFont } from "components/layout/fonts";
-import NavLink from "components/layout/header/navLink";
-import GitHubButton from "components/layout/header/buttonGitHub";
-import ColorSchemeButton from "components/layout/header/buttonColorScheme";
-import classes from "components/layout/header/header.module.scss";
+import { handwrittenFont } from "components/Layout/fonts";
+import NavLink from "components/Layout/NavMenu/NavLink";
+import GitHubButton from "components/Layout/NavMenu/GitHubButton";
+import ColorSchemeButton from "components/Layout/NavMenu/ColorSchemeButton";
+import classes from "components/Layout/Header/Header.module.scss";
 
 export default function Header() {
   return (

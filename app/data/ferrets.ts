@@ -16,7 +16,7 @@ export const playgroups = [
 
 export interface Ferret {
   name: string;
-  sex: Nullable<"male" | "female">;
+  sex: "male" | "female";
   playgroup: string;
   valhallaDate: Nullable<DateString>;
 }
