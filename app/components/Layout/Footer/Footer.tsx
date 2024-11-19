@@ -19,6 +19,7 @@ export default function Footer() {
           </Link>
           {" "}
           and are available under
+          {" "}
           <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes["footer-link"]}>
             Creative Commons BY-NC-S
           </Link>.

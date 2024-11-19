@@ -2,7 +2,6 @@
 
 import { Burger, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-
 import classes from "components/layout/header/header.module.scss";
 
 export default function NavDrawer() {
