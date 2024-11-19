@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import classes from "components/layout/header/header.module.scss";
+import classes from "components/Layout/NavMenu/NavMenu.module.scss";
 
 interface Props {
   path: string;
