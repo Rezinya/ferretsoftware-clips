@@ -10,11 +10,11 @@ import {
   parseThemeColor,
   rem,
   Input,
-  Card,
-  Blockquote
+  Paper,
+  Accordion,
 } from "@mantine/core";
 
-import { bodyFont, titleFont } from "components/layout/fonts";
+import { bodyFont, titleFont } from "components/Layout/fonts";
 import classes from "styles/mantine.module.scss";
 
 const brown: MantineColorsTuple = [
@@ -102,19 +102,19 @@ const themeOverride = createTheme({
     fontFamily: `${titleFont.style.fontFamily}, ${DEFAULT_THEME.fontFamily}`
   },
   components: {
+    Accordion: Accordion.extend({
+      classNames: {
+        item: classes.accitem
+      }
+    }),
     Input: Input.extend({
       classNames: {
         input: classes.textinput
       }
     }),
-    Card: Card.extend({
+    Paper: Paper.extend({
       classNames: {
-        root: classes.cardroot
-      }
-    }),
-    Blockquote: Blockquote.extend({
-      classNames: {
-        root: classes.blockquoteroot
+        root: classes.paperroot
       }
     }),
   },
