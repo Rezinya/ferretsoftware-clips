@@ -2,14 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { RiMenLine, RiWomenLine } from "@remixicon/react";
 
-import { handwrittenFont } from "components/layout/fonts";
+import { handwrittenFont } from "components/Layout/fonts";
 import { FerretMugshot, ferretMugshots } from "data/images";
-import { Nullable, DateString } from "data/types";
-import styles from "components/polaroid/polaroid.module.scss";
+import { DateString } from "data/types";
+import styles from "components/Polaroid/Polaroid.module.scss";
 
 export default function Polaroid({ name, sex, valhallaDate }: {
   name: string,
-  sex: Nullable<"male" | "female">,
+  sex: "male" | "female",
   valhallaDate: DateString | null
 }) {
   let found = ferretMugshots.find((item) => item.name === name) as FerretMugshot;
@@ -17,7 +17,7 @@ export default function Polaroid({ name, sex, valhallaDate }: {
   return (
     <div className={styles.wrapper}>
       <div className={styles.film}>
-        <Link href={`../search/${name}`} className={styles["film-link"]}>
+        <Link href={`../search?q=${name}`} className={styles["film-link"]}>
           <Image
             src={found.src}
             width={190}
