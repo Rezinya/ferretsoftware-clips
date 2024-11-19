@@ -1,0 +1,14 @@
+.inputs {
+  width: 100%;
+  margin-bottom: var(--mantine-spacing-sm);
+}
+
+.dates {
+  display: flex;
+  gap: var(--mantine-spacing-lg);
+  margin-bottom: var(--mantine-spacing-md);
+  
+  &-item {
+    flex-basis: 15rem;
+  }
+}

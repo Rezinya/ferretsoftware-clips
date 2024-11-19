@@ -1,18 +1,13 @@
-/* Alert ----- */
+/* Accordian ----- */
 
-.alerttitle {
-  font-size: var(--mantine-font-size-md);
+.accitem {
+  background-color: light-dark(var(--mantine-color-brown-0), var(--mantine-color-custom-9));
+  border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
 }
 
-/* Blockquote ----- */
+/* Paper ----- */
 
-.blockquoteroot {
-  padding: 1.4rem 1.8rem;
-}
-
-/* Card ----- */
-
-.cardroot {
+.paperroot {
   border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
 }
 

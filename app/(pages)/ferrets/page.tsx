@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Title } from "@mantine/core";
 
 import { sortedFerrets, playgroups } from "data/ferrets";
-import Polaroid from "components/polaroid/polaroid";
+import Polaroid from "components/Polaroid/Polaroid";
 import classes from "pages/ferrets/page.module.scss";
 
 export const metadata: Metadata = {
