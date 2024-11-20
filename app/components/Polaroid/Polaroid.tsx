@@ -12,7 +12,7 @@ export default function Polaroid({ name, sex, valhallaDate }: {
   sex: "male" | "female",
   valhallaDate: DateString | null
 }) {
-  let found = ferretMugshots.find((item) => item.name === name) as FerretMugshot;
+  const found = ferretMugshots.find((item) => item.name === name) as FerretMugshot;
 
   return (
     <div className={styles.wrapper}>
@@ -20,8 +20,11 @@ export default function Polaroid({ name, sex, valhallaDate }: {
         <Link href={`../search?q=${name}`} className={styles["film-link"]}>
           <Image
             src={found.src}
-            width={190}
-            height={190}
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
             alt={found.alt}
             className={styles["film-image"]}
             placeholder="blur"

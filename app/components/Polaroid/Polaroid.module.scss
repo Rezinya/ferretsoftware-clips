@@ -1,11 +1,10 @@
 .wrapper {
   position: relative;
-  width: 220;
 }
 
 .film {
   background: var(--mantine-color-brown-1);
-  padding-block: var(--mantine-spacing-md) var(--mantine-spacing-xs);
+  padding: var(--mantine-spacing-sm);
   box-shadow: var(--shadow);
 
   &-link {
@@ -14,7 +13,6 @@
   }
 
   &-image {
-    margin: 0 auto;
     border: 3px solid var(--mantine-color-gray-7);
   }
 }

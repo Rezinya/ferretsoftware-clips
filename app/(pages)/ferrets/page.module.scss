@@ -15,19 +15,15 @@
 
 .grid,
 .grid-valhalla {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  gap: var(--mantine-spacing-md);
 
-  @media (max-width: 500px) {
-    gap: var(--mantine-spacing-xs);
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
   }
-
-  @media (min-width: 500px) {
-    gap: var(--mantine-spacing-md);
-  }
-
-  @media (min-width: 1080px) {
-    gap: var(--mantine-spacing-lg);
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
