@@ -1,6 +1,7 @@
 :root {
   --min-width: 18.75rem;
-  --max-width: 67.5rem;
+  --max-width: 64rem;
+  --viewport-padding: 32px;
 
   --background-menu: rgba(67, 55, 48, 0.3);
   --background-brown-light: rgba(147, 105, 80, 0.15);
@@ -100,18 +101,29 @@ p {
 
 /* Page Layout ----- */
 
-.max-content-width {
-  max-width: var(--max-width);
-}
-
 .page-container {
   display: flex;
-  flex: 1 0 auto; /* Allows "sticky" footer */
-  margin: 0 auto;
+  flex: 1 0 max-content; /* Allows "sticky" footer */
+}
+
+.content {
+  &-section {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns:
+      1fr
+      min(calc(var(--max-width) - var(--viewport-padding) * 2), calc(100% - var(--viewport-padding) * 2))
+      1fr;
+    justify-content: center;
+  }
 }
 
 .main {
-  padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl) calc(var(--mantine-spacing-xl) * 3);
+  grid-column: 2;
 }
 
 .error {

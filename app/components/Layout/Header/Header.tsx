@@ -7,20 +7,21 @@ import classes from "components/Layout/Header/Header.module.scss";
 
 export default function Header() {
   return (
-    <div className={classes.wrapper}>
-      <header className={`${classes.header} max-content-width`}>
-        <Link href="/" className={classes.title}>
-          <Image
-            src="/ferretsoftware-clips.png"
-            width={42}
-            height={42}
-            alt="FerretSoftware Clips"
-          />
-          <div className={`${classes["title-text"]} ${handwrittenFont.className}`}>FerretSoftware Clips</div>
-        </Link>
-        <NavMenu />
-      </header>
+    <div className={classes.section}>
+      <div className={classes.wrapper}>
+        <header className={classes.header}>
+          <Link href="/" className={classes.title}>
+            <Image
+              src="/ferretsoftware-clips.png"
+              width={42}
+              height={42}
+              alt="FerretSoftware Clips"
+            />
+            <div className={`${classes["title-text"]} ${handwrittenFont.className}`}>FerretSoftware Clips</div>
+          </Link>
+          <NavMenu />
+        </header>
+      </div>
     </div>
-    
   );
 }

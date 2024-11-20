@@ -1,13 +1,18 @@
-.wrapper {
+.section {
   width: 100%;
   background: var(--background-menu);
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--viewport-padding);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  margin: auto;
-  padding: 0.4rem var(--mantine-spacing-xl);
+  padding-block: 0.5rem;
 }
 
 .title {

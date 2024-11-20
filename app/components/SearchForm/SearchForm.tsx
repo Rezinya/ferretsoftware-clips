@@ -5,7 +5,7 @@ import { Button, TextInput } from "@mantine/core";
 import { DatePickerInput } from '@mantine/dates';
 import { RiCalendarLine, RiSearchLine } from "@remixicon/react";
 
-import classes from "components/searchForm/searchForm.module.scss";
+import classes from "components/SearchForm/SearchForm.module.scss";
 
 export default function SearchForm() {
   return (

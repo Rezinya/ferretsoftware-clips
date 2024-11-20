@@ -1,7 +1,7 @@
 import NavLink from "components/Layout/NavMenu/NavLink";
 import GitHubButton from "components/Layout/NavMenu/GitHubButton";
 import ColorSchemeButton from "components/Layout/NavMenu/ColorSchemeButton";
-import classes from "components/Layout/Nav/NavMenu.module.scss";
+import classes from "components/Layout/NavMenu/NavMenu.module.scss";
 
 export default function NavMenu() {
   return (
