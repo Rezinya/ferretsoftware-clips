@@ -17,6 +17,15 @@ export default function FAQ() {
           </Accordion.Panel>
         </Accordion.Item>
 
+        <Accordion.Item value="mugshots">
+          <Accordion.Control>
+            Why are some of the ferret mugshots different from the wiki?
+          </Accordion.Control>
+          <Accordion.Panel>
+            I wanted a more recent photo for most of the ferrets because ferret coats can change seasonally.
+          </Accordion.Panel>
+        </Accordion.Item>
+
         <Accordion.Item value="tagging">
           <Accordion.Control>
             How can I help in tagging the clips?
@@ -31,10 +40,26 @@ export default function FAQ() {
           Any additional features planned?
           </Accordion.Control>
           <Accordion.Panel>
+            <p className={classes["no-margin"]}>Definitely:</p>
+            <ul>
+              <li>Load clips on a separate page
+                <ul>
+                  <li>Page will display clip&apos;s tags</li>
+                  <li>Include a form so users can submit tags</li>
+                </ul>
+              </li>
+              <li>[Backend] Automate data pulling and updating database
+                <ul>
+                  <li>Update &apos;view_count&apos; on existing id&apos;s</li>
+                  <li>Adding new id&apos;s</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p className={classes["no-margin"]}>Possibly:</p>
             <ul>
               <li>Allow users to log on to the website with their Twitch account</li>
               <li>Allow users to favorite clips</li>
-              <li>Load clips on a separate page with their tags + ability to submit tags</li>
             </ul>
           </Accordion.Panel>
         </Accordion.Item>

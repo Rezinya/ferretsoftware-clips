@@ -15,12 +15,17 @@
   &-image {
     border: 3px solid var(--mantine-color-gray-7);
   }
+
+  &:hover {
+    animation: tilt-shaking 0.3s;
+  }
 }
 
 .label {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--mantine-color-gray-7);
   gap: var(--mantine-spacing-lg);
   margin-top: var(--mantine-spacing-xs);
 
@@ -47,9 +52,9 @@
 }
 
 @keyframes tilt-shaking {
-  0%    { transform: rotate(0deg); }
-  25%   { transform: rotate(5deg); }
-  50%   { transform: rotate(0eg); }
+  0%    { transform: rotate(0deg);  }
+  25%   { transform: rotate(5deg);  }
+  50%   { transform: rotate(0deg);  }
   75%   { transform: rotate(-5deg); }
-  100%  { transform: rotate(0deg); }
+  100%  { transform: rotate(0deg);  }
 }

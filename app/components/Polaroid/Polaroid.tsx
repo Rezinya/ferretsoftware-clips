@@ -8,9 +8,9 @@ import { DateString } from "data/types";
 import styles from "components/Polaroid/Polaroid.module.scss";
 
 export default function Polaroid({ name, sex, valhallaDate }: {
-  name: string,
-  sex: "male" | "female",
-  valhallaDate: DateString | null
+  name: string;
+  sex: "male" | "female";
+  valhallaDate: DateString | null;
 }) {
   const found = ferretMugshots.find((item) => item.name === name) as FerretMugshot;
 
