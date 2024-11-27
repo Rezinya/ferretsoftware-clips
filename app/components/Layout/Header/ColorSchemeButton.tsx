@@ -1,6 +1,7 @@
 "use client";
 
-import { ActionIcon, useMantineColorScheme, useComputedColorScheme, Tooltip } from "@mantine/core";
+import { ActionIcon, useMantineColorScheme, Tooltip } from "@mantine/core";
+import { useMounted } from "@mantine/hooks";
 import { RiMoonClearFill, RiSunFill } from "@remixicon/react";
 
 export default function ColorSchemeButton({ size, radius }: {
@@ -8,31 +9,32 @@ export default function ColorSchemeButton({ size, radius }: {
   radius: string
 }) {
   const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme("light", { getInitialValueInEffect: true });
+  const isLight = useMantineColorScheme().colorScheme === "light";
+  const isMounted = useMounted();
 
-  return (
+  return isMounted ? (
     <ActionIcon
-      onClick={ () => setColorScheme(computedColorScheme === "light" ? "dark" : "light") }
-      variant="blank"
+      onClick={ () => setColorScheme(isLight ? "dark" : "light") }
+      variant="transparent"
       size={size}
       radius={radius}
       aria-label="Toggle color scheme"
     >
-      {computedColorScheme === "light" ? (
+      {isLight ? (
         <Tooltip
           label="Dark mode"
           transitionProps={{ transition: "pop", duration: 500 }}
         >
-          <RiMoonClearFill color="var(--mantine-color-text)" />
+          <RiMoonClearFill color="var(--mantine-color-snails-8)" />
         </Tooltip>
       ) : (
         <Tooltip
           label="Light mode"
           transitionProps={{ transition: "pop", duration: 500 }}
         >
-          <RiSunFill color="var(--mantine-color-custom-2)" />
+          <RiSunFill color="var(--mantine-color-snails-2)" />
         </Tooltip>
       )}
     </ActionIcon>
-  );
+  ): null;
 }

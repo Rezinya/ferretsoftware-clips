@@ -17,7 +17,7 @@ export function sortFerrets(ferrets: Ferret[]) {
   // Ferrets are sorted by playgroup then name (alphabetically)
   const sortedFerrets = groupBy(ferrets, x => x.playgroup);
 
-  playgroups.map(playgroup => {
+  playgroups.map((playgroup) => {
     sortedFerrets.get(playgroup)?.sort((a, b) => {
       return (a.name.localeCompare(b.name));
     });

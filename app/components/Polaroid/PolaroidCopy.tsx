@@ -10,7 +10,7 @@ export default function Polaroid({ name, sex }: {
   name: string;
   sex: "male" | "female";
 }) {
-  const description = "A photo of Rezi's ferret, Koda. He's asleep, looking like he's grinning while looking towards the camera.";
+  const description = "Koda: A sable ferret laying asleep. His mouth and eyes are slightly open, and he has a 'T'-speckled nose.";
   
   return (
     <div className={styles.wrapper}>

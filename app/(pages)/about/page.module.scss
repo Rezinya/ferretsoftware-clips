@@ -1,6 +1,10 @@
 .wrapper {
   display: flex;
   gap: var(--mantine-spacing-lg);
+
+  @media (max-width: 42em) {
+    flex-direction: column;
+  }
 }
 
 .left-section {
@@ -8,5 +12,10 @@
 }
 
 .right-section {
-  flex: 1 0 228px;
+  flex: 1 0 230px;
+
+  @media (max-width: 42em) {
+    align-self: flex-end;
+    max-width: 230px;
+  }
 }

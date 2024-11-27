@@ -23,7 +23,7 @@ export default function FerretsPage() {
       </p>
       <p>Want to learn more about the noodles? Visit their <Link href="https://piratesoftware.wiki/wiki/Ferrets">wiki</Link>!</p>
       
-      {playgroups.map(playgroup => (
+      {playgroups.map((playgroup) => (
         <div className={classes["playgroup-wrapper"]} key={`${playgroup}-wrapper`}>
           <Title order={2} className="sub-title" key={`${playgroup}-title`}>
             <Link href={`#${playgroup}`} className={classes["sub-title-link"]} key={`${playgroup}-title-link`}>
@@ -38,7 +38,7 @@ export default function FerretsPage() {
               classes["grid"] )}
             key={`${playgroup}-grid`}
           >
-            {sortedFerrets.get(playgroup)?.map(ferret => (
+            {sortedFerrets.get(playgroup)?.map((ferret) => (
               <Polaroid name={ferret.name} sex={ferret.sex} valhallaDate={ferret.valhallaDate} key={ferret.name} />
             ))}
           </div>

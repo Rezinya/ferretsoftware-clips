@@ -6,7 +6,9 @@ export default function Footer() {
     <div className={classes.section}>
       <div className={classes.wrapper}>
         <footer className={classes.footer}>
-          <p className={classes["footer-text"]}>&copy; 2024 FerretSoftware Clips.</p>
+          <p className={classes["footer-text"]}>
+            &copy; 2024 FerretSoftware Clips.
+          </p>
           <p className={classes["footer-text"]}>
             FerretSoftware Clips is not affiliated with Twitch or
             {" "}
@@ -22,7 +24,7 @@ export default function Footer() {
             and are available under
             {" "}
             <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/" className={classes["footer-link"]}>
-              Creative Commons BY-NC-S
+              Creative Commons BY-NC-SA
             </Link>.
           </p>
         </footer>

@@ -3,9 +3,12 @@
 }
 
 .film {
-  background: var(--mantine-color-brown-1);
+  background: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-brown-1)
+  );
   padding: var(--mantine-spacing-sm);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
 
   &-link {
     color: var(--mantine-color-gray-7);
@@ -45,9 +48,12 @@
     align-items: center;
     gap: var(--mantine-spacing-lg);
     border-radius: var(--mantine-radius-lg);
-    background: var(--background-menu);
+    background: light-dark(
+      var(--mantine-color-brown-2),
+      var(--mantine-color-brown-7)
+    );
     padding: 0.2rem;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-md);
   }
 }
 

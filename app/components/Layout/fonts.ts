@@ -12,11 +12,13 @@ export const bodyFont = Hind({
 
 export const titleFont = Geologica({
   subsets: ["latin"],
+  variable: "--font-title",
   display: "swap"
 });
 
 export const handwrittenFont = Margarine({
   weight: ["400"],
   subsets: ["latin"],
+  variable: "--font-handwritten",
   display: "swap"
 });

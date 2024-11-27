@@ -3,12 +3,12 @@ import classes from "components/Layout/Home/Home.module.scss";
 
 export default function StatsSummary() {
   return (
-    <Paper bg="var(--background-brown-light)" p="md" withBorder>
+    <Paper p="md" withBorder>
       <p>
         <Text
           component="span"
           variant="gradient"
-          gradient={{ from: "brown.3", to: "custom.5", deg: 90 }}
+          gradient={{ from: "brown.4", to: "snails.5", deg: 90 }}
           fw={700}
         >
           Last data pull:
@@ -20,7 +20,7 @@ export default function StatsSummary() {
       <p className={classes["no-margin"]}>FerretSoftware has a total of <strong>12,620</strong> clips!</p>
       <ul>
         <li>Number of clips with 100+ views: <strong>1,719</strong></li>
-        <li>Number of clips with 100+ views: <strong>3,204</strong></li>
+        <li>Number of clips with 50+ views: <strong>3,204</strong></li>
       </ul>
     </Paper>
   );

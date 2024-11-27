@@ -1,6 +1,9 @@
 .section {
   width: 100%;
-  background: var(--background-menu);
+  background: light-dark(
+    var(--mantine-color-brown-1),
+    var(--mantine-color-brown-6)
+  );
 }
 
 .wrapper {
@@ -15,9 +18,5 @@
 
   &-text {
     margin-bottom: 0.3em;
-  }
-
-  &-link {
-    color: var(--mantine-color-custom-7);
   }
 }

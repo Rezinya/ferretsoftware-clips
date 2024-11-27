@@ -1,25 +1,42 @@
-/* Accordian ----- */
+/* Button -----*/
 
-.accitem {
-  background-color: light-dark(var(--mantine-color-brown-0), var(--mantine-color-custom-9));
-  border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
+.btnroot {
+  box-shadow: var(--input-shadow);
+}
+
+/* Drawer ----- */
+
+.drawheader {
+  background: light-dark(
+    "#fff",
+    var(--mantine-color-brown-6)
+  );
+}
+
+.drawtitle {
+  font-family: var(--font-handwritten);
+}
+
+/* Input and variants ----- */
+
+.input {
+  transition: none;
+  box-shadow: var(--input-shadow);
+
+  &:focus-within {
+    outline: 1px solid light-dark(
+      var(--mantine-color-brown-4),
+      var(--mantine-color-brown-9)
+    );
+    border-color: transparent;
+  }
 }
 
 /* Paper ----- */
 
 .paperroot {
-  border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
-}
-
-/* TextInput ----- */
-
-.textinput {
-  transition: none;
-  background-color: light-dark(var(--mantine-color-brown-0), var(--mantine-color-custom-9));
-  border: light-dark(1px solid var(--mantine-color-brown-3), 1px solid var(--mantine-color-brown-7));
-
-  &:focus-within {
-    outline: 1px solid var(--mantine-color-custom-7);
-    border-color: transparent;
-  }
+  background: light-dark(
+    "#fff",
+    var(--mantine-color-brown-6)
+  );
 }

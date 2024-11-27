@@ -3,14 +3,13 @@ import Image from "next/image";
 import { RiMenLine, RiWomenLine } from "@remixicon/react";
 
 import { handwrittenFont } from "components/Layout/fonts";
-import { FerretMugshot, ferretMugshots } from "data/images";
-import { DateString } from "data/types";
+import { FerretMugshot, ferretMugshots } from "@/app/data/ferretMugshots";
 import styles from "components/Polaroid/Polaroid.module.scss";
 
 export default function Polaroid({ name, sex, valhallaDate }: {
   name: string;
   sex: "male" | "female";
-  valhallaDate: DateString | null;
+  valhallaDate: string | null;
 }) {
   const found = ferretMugshots.find((item) => item.name === name) as FerretMugshot;
 
