@@ -1,4 +1,3 @@
-import { Nullable, DateString } from "data/types";
 import { getSortedFerretNames, sortFerrets } from "utils/arrayHelpers";
 
 export const playgroups = [
@@ -18,7 +17,7 @@ export interface Ferret {
   name: string;
   sex: "male" | "female";
   playgroup: string;
-  valhallaDate: Nullable<DateString>;
+  valhallaDate: string | null;
 }
 
 // Initial 57 ferrets added according to arrival date (if provided)
@@ -363,6 +362,12 @@ export const ferrets: Ferret[] = [
     name: "Bruce",
     sex: "male",
     playgroup: "Teep and Bruce",
+    valhallaDate: null,
+  },
+  {
+    name: "Toby",
+    sex: "male",
+    playgroup: "Solo",
     valhallaDate: null,
   },
   {

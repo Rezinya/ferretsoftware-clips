@@ -55,10 +55,11 @@ import odinMugshot from "assets/mugshots/odin.webp";
 import spudMugshot from "assets/mugshots/spud.webp";
 import teepMugshot from "assets/mugshots/teep.webp";
 import bruceMugshot from "assets/mugshots/bruce.webp";
-import pepper2Mugshot from "assets/mugshots/placeholder.webp";
-import salt2Mugshot from "assets/mugshots/placeholder.webp";
-import skyeMugshot from "assets/mugshots/placeholder.webp";
-import snowballMugshot from "assets/mugshots/placeholder.webp";
+import tobyMugshot from "assets/mugshots/toby.webp";
+import pepper2Mugshot from "assets/mugshots/pepper_2.webp";
+import salt2Mugshot from "assets/mugshots/salt_2.webp";
+import skyeMugshot from "assets/mugshots/skye.webp";
+import snowballMugshot from "assets/mugshots/snowball.webp";
 
 export type FerretMugshot = {
   name: string;
@@ -70,306 +71,311 @@ export const ferretMugshots: FerretMugshot[] = [
   {
     name: "Snails",
     src: snailsMugshot,
-    alt: "Snails mugshot"
+    alt: "Snails: A sable ferret laying on a dark blue blanket. She has a very speckled nose."
   },
   {
     name: "Loki",
     src: lokiMugshot,
-    alt: "Loki mugshot"
+    alt: "Loki: A sable ferret being held. She has a few specks on her nose."
   },
   {
     name: "Beef",
     src: beefMugshot,
-    alt: "Beef mugshot"
+    alt: "Beef: A sable ferret being held is looking past the viewer. He has a very speckled nose."
   },
   {
     name: "Cheese",
     src: cheeseMugshot,
-    alt: "Cheese mugshot"
+    alt: "Cheese: A sable ferret looks straight at the viewer. She can sometimes be distinguished due to her 'warpaint' mask, where the mask is not connected together."
   },
   {
     name: "Beans",
     src: beansMugshot,
-    alt: "Beans mugshot"
+    alt: "Beans: A champagne ferret glares straight towards the viewer. Known for ear crimes."
   },
   {
     name: "Onion",
     src: onionMugshot,
-    alt: "Onion mugshot"
+    alt: "Onion: A champagne ferret being held and looking towards the viewer. Known for escape attempts and has even succeeded a few times."
   },
   {
     name: "Tortilla",
     src: tortillaMugshot,
-    alt: "Tortilla mugshot"
+    alt: "Tortilla: A champagne ferret being held. Known for climbing crimes."
   },
   {
     name: "Mouse",
     src: mouseMugshot,
-    alt: "Mouse mugshot"
+    alt: "Mouse: A white ferret is in a playful stance with her mouth open."
   },
   {
     name: "Ghost",
     src: ghostMugshot,
-    alt: "Ghost mugshot"
+    alt: "Ghost: An albino ferret looks off to the side."
   },
   {
     name: "Grandpa",
     src: grandpaMugshot,
-    alt: "Grandpa mugshot"
+    alt: "Grandpa: A sable ferret wrapped in a soft white blanket. He has a speckled nose."
   },
   {
     name: "Banana",
     src: bananaMugshot,
-    alt: "Banana mugshot"
+    alt: "Banana: A sable ferret is standing in a garden, looking towards the viewer. She has a slightly speckled nose."
   },
   {
     name: "Lucky",
     src: luckyMugshot,
-    alt: "Lucky mugshot"
+    alt: "Lucky: A black sable ferret stands against a gate, looking upwards. His mask almost reaches the top of his head, and he has a dark nose."
   },
   {
     name: "Pickle",
     src: pickleMugshot,
-    alt: "Pickle mugshot"
+    alt: "Pickle: A blaze ferret looking towards the viewer. His mask is subtle."
   },
   {
     name: "Eddie",
     src: eddieMugshot,
-    alt: "Eddie mugshot"
+    alt: "Eddie: A sable ferret laying on a fuzzy blanket. His nose is very speckled."
   },
   {
     name: "Max",
     src: maxMugshot,
-    alt: "Max mugshot"
+    alt: "Max: A white ferret laying on his back. His tongue is slightly sticking out."
   },
   {
     name: "Mocha",
     src: mochaMugshot,
-    alt: "Mocha mugshot"
+    alt: "Mocha: A champagne panda (white head + white mitts) ferret lays in a box, looking at the viewer."
   },
   {
     name: "Vincent",
     src: vincentMugshot,
-    alt: "Vincent mugshot"
+    alt: "Vincent: A blaze ferret looks out from a plush castle. His mask is faint, has white mitts, and is missing most of his left ear."
   },
   {
     name: "Latte",
     src: latteMugshot,
-    alt: "Latte mugshot"
+    alt: "Latte: A champagne ferret is sitting on a cloud bed and is looking at the viewer."
   },
   {
     name: "Moxie",
     src: moxieMugshot,
-    alt: "Moxie mugshot"
+    alt: "Moxie: A champagne ferret stares directly towards the viewer."
   },
   {
     name: "Bandit",
     src: banditMugshot,
-    alt: "Bandit mugshot"
+    alt: "Bandit: A sable ferret standing in a bath tub. A majority of his fur is gone due to adrenal."
   },
   {
     name: "Rose",
     src: roseMugshot,
-    alt: "Rose mugshot"
+    alt: "Rose: A sable ferret laying on a white and pink blanket."
   },
   {
     name: "Chili",
     src: chiliMugshot,
-    alt: "Chili mugshot"
+    alt: "Chili: A champagne ferret looks up as he's sitting in a trash can."
   },
   {
     name: "Fig",
     src: figMugshot,
-    alt: "Fig mugshot"
+    alt: "Fig: A sable ferret laying in an orange bed, seemingly looking at the viewer. He has a few specks on his nose."
   },
   {
     name: "Kahlua",
     src: kahluaMugshot,
-    alt: "Kahlua mugshot"
+    alt: "Kahlua: A champagne ferret being held and looking at the viewer. Known for ear crimes."
   },
   {
     name: "Mai Tai",
     src: maiTaiMugshot,
-    alt: "Mai Tai mugshot"
+    alt: "Mai Tai: A champagne ferret sits on a blue blanket, looking towards the left. She has red eyes and white mitts."
   },
   {
     name: "Mimosa",
     src: mimosaMugshot,
-    alt: "Mimosa mugshot"
+    alt: "Mimosa: A champagne ferret being held. She has milky toes, and her mask is very faint."
   },
   {
     name: "Scotch",
     src: scotchMugshot,
-    alt: "Scotch mugshot"
+    alt: "Scotch: A sable ferret being held."
   },
   {
     name: "Whiskey",
     src: whiskeyMugshot,
-    alt: "Whiskey mugshot"
+    alt: "Whiskey: A sable ferret being held. He has a dark nose."
   },
   {
     name: "Badger",
     src: badgerMugshot,
-    alt: "Badger mugshot"
+    alt: "Badger: A black sable ferret is standing in a rice bin. He has a dark nose."
   },
   {
     name: "Moose",
     src: mooseMugshot,
-    alt: "Moose mugshot"
+    alt: "Moose: A sable ferret looks up towards the viewer. He has a dark nose."
   },
   {
     name: "Peepo",
     src: peepoMugshot,
-    alt: "Peepo mugshot"
+    alt: "Peepo: A sable ferret sits on a blanket."
   },
   {
     name: "Pepper",
     src: pepperMugshot,
-    alt: "Pepper mugshot"
+    alt: "Pepper: A white ferret looking off to the side."
   },
   {
     name: "Salt",
     src: saltMugshot,
-    alt: "Salt mugshot"
+    alt: "Salt: A champagne ferret being held. She has no mask."
   },
   {
     name: "Henry",
     src: henryMugshot,
-    alt: "Henry mugshot"
+    alt: "Henry: A champagne ferret perched on a tree. He has front milky toes. Known for having more than half of his brain being scar tissue yet learning new things."
   },
   {
     name: "Jinx",
     src: jinxMugshot,
-    alt: "Jinx mugshot"
+    alt: "Jinx: A black sable being held. Known for climbing crimes."
   },
   {
     name: "Nacho",
     src: nachoMugshot,
-    alt: "Nacho mugshot"
+    alt: "Nacho: A chocolate ferret being held."
   },
   {
     name: "Salsa",
     src: salsaMugshot,
-    alt: "Salsa mugshot"
+    alt: "Salsa: A champagne ferret being held and looking towards the viewer."
   },
   {
     name: "Mishka",
     src: mishkaMugshot,
-    alt: "Mishka mugshot"
+    alt: "Mishka: A sable ferret with her mouth open. Known for being a biter."
   },
   {
     name: "Finn",
     src: finnMugshot,
-    alt: "Finn mugshot"
+    alt: "Finn: A champagne ferret stands behind cage bars. His mask is faint."
   },
   {
     name: "Louise",
     src: louiseMugshot,
-    alt: "Louise mugshot"
+    alt: "Louise: A sable ferret being held and looking towards the viewer."
   },
   {
     name: "Thelma",
     src: thelmaMugshot,
-    alt: "Thelma mugshot"
+    alt: "Thelma: A sable ferret looking towards the viewer. She has a speckled nose."
   },
   {
     name: "Felix",
     src: felixMugshot,
-    alt: "Felix mugshot"
+    alt: "Felix: A silver ferret peeks out from a yellow bed. He has large dark specks on his nose."
   },
   {
     name: "Kyo",
     src: kyoMugshot,
-    alt: "Kyo mugshot"
+    alt: "Kyo: An albino ferret playfully biting a hand."
   },
   {
     name: "Sai",
     src: saiMugshot,
-    alt: "Sai mugshot"
+    alt: "Sai: A black sable being held. She has white spots under her eyes and a dark nose."
   },
   {
     name: "Rusty",
     src: rustyMugshot,
-    alt: "Rusty mugshot"
+    alt: "Rusty: A champagne ferret looking towards the viewer."
   },
   {
     name: "Demeter",
     src: demeterMugshot,
-    alt: "Demeter mugshot"
+    alt: "Demeter: A champagne ferret stands against a gate, looking upwards."
   },
   {
     name: "Mistoffelees",
     src: mistoffeleesMugshot,
-    alt: "Mistoffelees mugshot"
+    alt: "Mistoffelees: A sable ferret sits in a rice bin. He has a dark nose and white mitts (front only)."
   },
   {
     name: "Cashew",
     src: cashewMugshot,
-    alt: "Cashew mugshot"
+    alt: "Cashew: A chocolate ferret looks off to the side. He is easily distinguished from the others due to his short tail."
   },
   {
     name: "Hazelnut",
     src: hazelnutMugshot,
-    alt: "Hazelnut mugshot"
+    alt: "Hazelnut: A silver ferret with a mostly white head is biting a hand."
   },
   {
     name: "Peanut",
     src: peanutMugshot,
-    alt: "Peanut mugshot"
+    alt: "Peanut: A blaze ferret biting on a hand. Her white head marking is quite large, and she also has white mitts."
   },
   {
     name: "Cowboy",
     src: cowboyMugshot,
-    alt: "Cowboy mugshot"
+    alt: "Cowboy: A white ferret peeks from a white blanket. He has little fur due to adrenal."
   },
   {
     name: "Torch",
     src: torchMugshot,
-    alt: "Torch mugshot"
+    alt: "Torch: A white ferret sitting."
   },
   {
     name: "Luna",
     src: lunaMugshot,
-    alt: "Luna mugshot"
+    alt: "Luna: A silver ferret being held and looking off to the side."
   },
   {
     name: "Odin",
     src: odinMugshot,
-    alt: "Odin mugshot"
+    alt: "Odin: A white ferret being held. He has dark markings on the top of his head."
   },
   {
     name: "Spud",
     src: spudMugshot,
-    alt: "Spud mugshot"
+    alt: "Spud: A black sable ferret being held. He has a dark nose."
   },
   {
     name: "Teep",
     src: teepMugshot,
-    alt: "Teep mugshot"
+    alt: "Teep: A silver ferret looks towards the viewer."
   },
   {
     name: "Bruce",
     src: bruceMugshot,
-    alt: "Bruce mugshot"
+    alt: "Bruce: A sable ferret lays on a blanket."
+  },
+  {
+    name: "Toby",
+    src: tobyMugshot,
+    alt: "Toby: A sable ferret being held. He has a 'T'-speckled nose."
   },
   {
     name: "Pepper_2",
     src: pepper2Mugshot,
-    alt: "Pepper_2 mugshot"
+    alt: "Pepper_2: A sable ferret being held. The mix of black and white fur makes him almost gray. He as a speckled nose."
   },
   {
     name: "Salt_2",
     src: salt2Mugshot,
-    alt: "Salt_2 mugshot"
+    alt: "Salt_2: A champagne panda (white head + white mitts) ferret being held."
   },
   {
     name: "Skye",
     src: skyeMugshot,
-    alt: "Skye mugshot"
+    alt: "Skye: A white ferret being held. She has black markings on her head, as well as a large black speck on her nose."
   },
   {
     name: "Snowball",
     src: snowballMugshot,
-    alt: "Snowball mugshot"
+    alt: "Snowball: An albino ferret being held."
   },
 ];
