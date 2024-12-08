@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { Title } from "@mantine/core";
+import { Title, Tooltip } from "@mantine/core";
 
 import { sortedFerrets, playgroups } from "data/ferrets";
 import Polaroid from "components/Polaroid/Polaroid";
@@ -14,13 +14,17 @@ export default function FerretsPage() {
   return (
     <>
       <Title order={1} className="title">Ferrets by Playgroup
-        <span className={classes.mark}>*</span>
+        <Tooltip
+          multiline
+          w={250}
+          withArrow
+          transitionProps={{ transition: "fade", duration: 300 }}
+          label="With the exception of a few specific ferrets, being put into a playgroup does not mean that they will never interact with ferrets from other playgroups."
+        >
+          <span className={classes.mark}>*</span>
+        </Tooltip>
       </Title>
-      
-      <p>
-        <span className={classes.mark}>* </span>
-        With the exception of a few specific ferrets, being put into a playgroup does not mean that they will never interact with ferrets from other playgroups.
-      </p>
+
       <p>Want to learn more about the noodles? Visit their <Link href="https://piratesoftware.wiki/wiki/Ferrets">wiki</Link>!</p>
       
       {playgroups.map((playgroup) => (

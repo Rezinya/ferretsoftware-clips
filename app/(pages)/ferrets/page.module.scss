@@ -20,10 +20,10 @@
   justify-content: center;
   gap: var(--mantine-spacing-md);
 
-  @media (max-width: 960px) {
+  @media (max-width: 60em) {
     grid-template-columns: repeat(3, 1fr);
   }
-  @media (max-width: 650px) {
+  @media (max-width: 41em) {
     grid-template-columns: repeat(2, 1fr);
   }
 }

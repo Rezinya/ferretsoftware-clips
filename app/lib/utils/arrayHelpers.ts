@@ -1,4 +1,5 @@
-import { Ferret, ferrets, playgroups } from "data/ferrets";
+import { ferrets, playgroups } from "data/ferrets";
+import { Ferret } from "@/app/lib/types";
 
 function groupBy<K, V>(arr: V[], grouper: (item: V) => K) {
   return arr.reduce((store, item) => {

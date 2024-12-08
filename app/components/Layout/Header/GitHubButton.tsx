@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ActionIcon, Tooltip, useMantineColorScheme } from "@mantine/core";
 import { useMounted } from "@mantine/hooks";
-import { convertSizeToPx } from "utils/fontSize";
+import { convertSizeToPx } from "lib/utils/fontSize";
 
 export default function GitHubButton({ link, size, radius }: {
   link: string,
@@ -13,7 +13,7 @@ export default function GitHubButton({ link, size, radius }: {
 }) {
   const isLight = useMantineColorScheme().colorScheme === "light";
   const isMounted = useMounted();
-  const pxSize = convertSizeToPx({size});
+  const pxSize = convertSizeToPx(size);
 
   return isMounted ? (
     <ActionIcon

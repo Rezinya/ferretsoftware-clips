@@ -39,23 +39,22 @@ export type Database = {
           created_at: string
           creator_name: string
           duration: number
-          ferrets: string[] | null
-          hoomans: string[] | null
           id: string
-          playgroups: string[] | null
+          tags: string[] | null
+          textsearchable_col: unknown | null
           thumbnail_url: string
           title: string
           url: string
           view_count: number
+          title_creator: string | null
         }
         Insert: {
           created_at: string
           creator_name: string
           duration: number
-          ferrets?: string[] | null
-          hoomans?: string[] | null
           id: string
-          playgroups?: string[] | null
+          tags?: string[] | null
+          textsearchable_col?: unknown | null
           thumbnail_url: string
           title: string
           url: string
@@ -65,10 +64,9 @@ export type Database = {
           created_at?: string
           creator_name?: string
           duration?: number
-          ferrets?: string[] | null
-          hoomans?: string[] | null
           id?: string
-          playgroups?: string[] | null
+          tags?: string[] | null
+          textsearchable_col?: unknown | null
           thumbnail_url?: string
           title?: string
           url?: string
@@ -81,7 +79,20 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      array_to_string_immutable: {
+        Args: {
+          arg: string[]
+          separator?: string
+          null_string?: string
+        }
+        Returns: string
+      }
+      title_creator: {
+        Args: {
+          "": unknown
+        }
+        Returns: string
+      }
     }
     Enums: {
       [_ in never]: never

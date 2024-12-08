@@ -31,7 +31,7 @@ export default function FAQ() {
             How can I help in tagging the clips?
           </Accordion.Control>
           <Accordion.Panel>
-            Currently, I have a &apos;sample&apos; of the data at the PirateSoftware wiki under the page <Link href='https://piratesoftware.wiki/wiki/Ferrets/List_of_Clips'>Ferrets/List of Clips</Link>, so users can edit there. I still need to build the API to allow users to view (and possibly update?) the database from here.
+            Currently, I have a &apos;sample&apos; of the data at the PirateSoftware wiki under the page <Link href='https://piratesoftware.wiki/wiki/Ferrets/List_of_Clips'>Ferrets/List of Clips</Link>, so users can edit there. I&apos;m currently in the process of building the API so users can view and submit tags straight from this website.
           </Accordion.Panel>
         </Accordion.Item>
 
@@ -51,7 +51,7 @@ export default function FAQ() {
               <li>[Backend] Automate data pulling and updating database
                 <ul>
                   <li>Update &apos;view_count&apos; on existing id&apos;s</li>
-                  <li>Adding new id&apos;s</li>
+                  <li>Add new id&apos;s</li>
                 </ul>
               </li>
             </ul>

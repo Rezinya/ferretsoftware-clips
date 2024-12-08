@@ -1,4 +1,5 @@
-import { getSortedFerretNames, sortFerrets } from "utils/arrayHelpers";
+import { Ferret } from "@/app/lib/types";
+import { getSortedFerretNames, sortFerrets } from "lib/utils/arrayHelpers";
 
 export const playgroups = [
   "GenPop",
@@ -12,13 +13,6 @@ export const playgroups = [
   "Solo",
   "Valhalla"
 ];
-
-export interface Ferret {
-  name: string;
-  sex: "male" | "female";
-  playgroup: string;
-  valhallaDate: string | null;
-}
 
 // Initial 57 ferrets added according to arrival date (if provided)
 export const ferrets: Ferret[] = [

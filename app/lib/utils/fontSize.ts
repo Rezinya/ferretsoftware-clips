@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 
-export function convertSizeToPx({ size }: {
-  size: string
-}) {
+export function convertSizeToPx(size: string) {
   let fontSize = 16;
   let rem;
   

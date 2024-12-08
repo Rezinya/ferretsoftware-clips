@@ -25,8 +25,9 @@
       "assets/*": ["./app/assets/*"],
       "components/*": ["./app/components/*"],
       "data/*": ["./app/data/*"],
+      "lib/*": ["./app/lib/*"],
       "styles/*": ["./app/styles/*"],
-      "utils/*": ["./app/utils/*"],
+      "utils/*": ["app/lib/utils/*"],
     }
   },
   "include": [
