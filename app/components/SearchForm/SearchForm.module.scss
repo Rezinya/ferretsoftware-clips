@@ -1,14 +1,27 @@
-.inputs {
-  width: 100%;
-  margin-bottom: var(--mantine-spacing-sm);
+.form {
+  &-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--mantine-spacing-md);
+  }
 }
 
-.dates {
-  display: flex;
-  gap: var(--mantine-spacing-lg);
-  margin-bottom: var(--mantine-spacing-md);
-  
-  &-item {
-    flex-basis: 15rem;
+.input {
+  &-search {
+    flex: 1 1 auto;
+    align-self: flex-start;
+  }
+
+  &-sort {
+    align-self: flex-start;
+  }
+
+  &-date {
+    align-self: flex-start;
+    flex-basis: 10em;
+
+    @media (max-width: 32em) {
+      flex-basis: 8em;
+    }
   }
 }

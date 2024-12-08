@@ -1,29 +1,46 @@
 "use client";
 
-import { useState } from "react";
-import { Grid } from "@mantine/core";
-import { getClips } from "utils/supabase/fetch";
-import classes from "components/searchResults/searchResults.module.scss";
+import { useEffect, useRef, useState } from "react";
+import { Text } from "@mantine/core";
+import { useIntersection } from "@mantine/hooks";
 
-export default async function SearchResults() {
-  const fetchSize = 25;
-  const [results, setResults] = useState(fetchSize);
+import Clip from "components/Clip/Clip";
+import { SearchParams } from "lib/types";
+import { Tables } from "lib/types.database";
+import classes from "components/SearchResults/SearchResults.module.scss";
 
-  let fromOffset = 0;
-  let toOffset = fromOffset + fetchSize;
+const FETCH_SIZE = 24;
 
-  const clips = await getClips(fromOffset, toOffset);
+export default function SearchResults({ searchParams, initialClips }: {
+  searchParams: SearchParams | undefined;
+  initialClips: Tables<"clips">[];
+}) {
+  const [clips, setClips] = useState<Tables<"clips">[]>(initialClips);
+  const [offset, setOffset] = useState(FETCH_SIZE);
 
-  const getMoreClips = async () => {
-    fromOffset = 1 + fetchSize;
-    toOffset += fetchSize;
-    
-    const newClips = await getClips(fromOffset, toOffset);
-    setResults(toOffset);
-  };
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { ref, entry } = useIntersection({
+    root: containerRef.current,
+    threshold: 1,
+  });
+
+  //const loadMoreClips = async () => {
+  //  const newClips = await getClips(searchParams, offset, FETCH_SIZE);
+  //  setClips((clips) => [...clips, ...newClips]);
+  //  setOffset((offset) => offset + FETCH_SIZE);
+  //};
 
   return (
-    <>
-    </>
+    <div className={classes.grid}>
+      {/*clips?.map((clip) => (
+        <Clip clip={clip} key={clip.id} />
+      ))*/}
+
+      <div ref={ref}>
+        <Text c="var(--mantine-color-body)">
+          {entry?.isIntersecting ? "Loading..." : "."}
+        </Text>
+      </div>
+    </div>
   );
 }

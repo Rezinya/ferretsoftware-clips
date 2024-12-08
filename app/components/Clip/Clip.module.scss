@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+}
+
+.clip-thumbnail {
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.clip-data {
+  width: 100%;
+  height: 100%;
+  font-size: var(--mantine-font-size-sm);
+
+  &-fields {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: var(--mantine-radius-sm);
+    padding: 1px 5px;
+  }
+
+  &-duration {
+    top: 7px;
+    left: 7px;
+  }
+
+  &-views {
+    left: 7px;
+    bottom: 7px;
+  }
+
+  &-date {
+    right: 7px;
+    bottom: 7px;
+  }
+
+  @media (max-width: 54em) {
+    font-size: var(--mantine-font-size-xs);
+  }
+}
+
+.clip-label {
+  margin-top: 3px;
+
+  &-link {
+    text-decoration: none;
+  }
+}

@@ -1,5 +1,10 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--mantine-spacing-sm);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--mantine-spacing-md);
+  margin-top: var(--mantine-spacing-xl);
+
+  @media (max-width: 32em) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
