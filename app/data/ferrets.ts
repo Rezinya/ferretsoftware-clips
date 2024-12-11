@@ -1,4 +1,4 @@
-import { Ferret } from "@/app/lib/types";
+import { Ferret } from "lib/types";
 import { getSortedFerretNames, sortFerrets } from "lib/utils/arrayHelpers";
 
 export const playgroups = [

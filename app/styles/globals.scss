@@ -156,6 +156,11 @@ p {
   grid-column: 2;
 }
 
+.loading {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .error {
   &-wrapper{
     display: flex;

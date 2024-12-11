@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { dayjsExtended } from "lib/dayjs";
-import { Tables } from "@/app/lib/types.database";
+import { Tables } from "lib/types.database";
 import classes from "components/Clip/Clip.module.scss";
 
 export default function Clip({ clip }: {

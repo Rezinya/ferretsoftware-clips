@@ -16,14 +16,14 @@
 .grid,
 .grid-valhalla {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   justify-content: center;
   gap: var(--mantine-spacing-md);
 
-  @media (max-width: 60em) {
-    grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 45em) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  @media (max-width: 41em) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 34em) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

@@ -2,10 +2,10 @@ import { Paper, Text } from "@mantine/core";
 import classes from "components/Layout/Home/Home.module.scss";
 
 export default function StatsSummary() {
-  const pullDate = "November 11, 2024 11:23AM PST";
-  const totalCount = "12,620";
-  const hundredCount = "1,719";
-  const fiftyCount = "3,204";
+  const pullDate = "December 09, 2024 09:57PM PST";
+  const totalCount = "13,326";
+  const hundredCount = "1,863";
+  const fiftyCount = "3,442";
 
   return (
     <Paper p="md" withBorder>
@@ -17,8 +17,7 @@ export default function StatsSummary() {
           fw={700}
         >
           Last data pull:
-        </Text>
-        {" "}
+        </Text>{" "}
         {pullDate}
       </p>
 

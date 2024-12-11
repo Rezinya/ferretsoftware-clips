@@ -15,8 +15,7 @@ export default function AboutPage() {
 
       <div className={classes.wrapper}>
         <div className={classes["left-section"]}>
-          <p>Hi, I&apos;m
-            {" "}
+          <p>Hi, I&apos;m{" "}
             <Text
               component="span"
               variant="gradient"
@@ -25,8 +24,7 @@ export default function AboutPage() {
             >
               Rezi
             </Text>
-            , also known as
-            {" "}
+            , also known as{" "}
             <Text
               component="span"
               variant="gradient"
@@ -34,18 +32,11 @@ export default function AboutPage() {
               fw={700}
             >
               Reziakti
-            </Text>
-            {" "}
-            throughout various social media (check out my
-            {" "}
-            <Link href="https://rezinya.github.io/">
-              GitHub Page
-            </Link>
-            ). I&apos;ve always been self-taught in regards to frontend / web dev and I wanted to have a more recent project under my belt to list on my resume, and so FerretSoftware Clips was born.
+            </Text>{" "}
+            throughout various social media. I&apos;ve always been self-taught in regards to frontend / web dev and I wanted to have a more recent project under my belt to list on my resume, and so FerretSoftware Clips was born.
           </p>
           <p>
-            Feel free to check out my
-            {" "}
+            Feel free to check out my{" "}
             <Link href="https://rezinya.github.io/">
               GitHub Page
             </Link>

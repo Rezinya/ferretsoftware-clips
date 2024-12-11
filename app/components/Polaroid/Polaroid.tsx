@@ -3,7 +3,7 @@ import Image from "next/image";
 import { RiMenLine, RiWomenLine } from "@remixicon/react";
 
 import { handwrittenFont } from "components/Layout/fonts";
-import { FerretMugshot, ferretMugshots } from "@/app/data/ferretMugshots";
+import { FerretMugshot, ferretMugshots } from "data/ferretMugshots";
 import styles from "components/Polaroid/Polaroid.module.scss";
 
 export default function Polaroid({ name, sex, valhallaDate }: {

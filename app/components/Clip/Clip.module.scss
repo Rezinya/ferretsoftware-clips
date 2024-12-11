@@ -34,8 +34,12 @@
     bottom: 7px;
   }
 
-  @media (max-width: 54em) {
+  @media (max-width: 52em) {
     font-size: var(--mantine-font-size-xs);
+  }
+
+  @media (max-width: 47.5em) {
+    font-size: 0.6rem;
   }
 }
 
