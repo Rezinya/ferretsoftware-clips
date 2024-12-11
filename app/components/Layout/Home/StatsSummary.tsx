@@ -3,9 +3,9 @@ import classes from "components/Layout/Home/Home.module.scss";
 
 export default function StatsSummary() {
   const pullDate = "December 09, 2024 09:57PM PST";
-  const totalCount = "13,326";
-  const hundredCount = "1,863";
-  const fiftyCount = "3,442";
+  const totalCount = "13,053";
+  const hundredCount = "1,862";
+  const fiftyCount = "3,441";
 
   return (
     <Paper p="md" withBorder>
