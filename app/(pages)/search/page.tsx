@@ -1,10 +1,11 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import { Loader, Title } from "@mantine/core";
+import { Title } from "@mantine/core";
 
 import SearchForm from "components/SearchForm/SearchForm";
 import SearchResults from "components/SearchResults/SearchResults";
-import { getClips } from "lib/supabase/getClips";
+import LoadingCircle from "components/LoadingCircle";
+import { getClipCount, getClips } from "lib/supabase/getClips";
 import { SearchParams } from "lib/types";
 
 export const metadata: Metadata = {
@@ -13,19 +14,19 @@ export const metadata: Metadata = {
 
 const INITIAL_FETCH_SIZE = 24;
 
-export default async function SearchPage({ searchParams }: {
-  searchParams?: Promise<SearchParams>
-}) {
-  const params = await searchParams;
-  const initialClips = await getClips(params, 0, INITIAL_FETCH_SIZE);
-  let initialClipsIds = "";
+export default async function SearchPage(props: { searchParams?: Promise<SearchParams> }) {
+  const searchParams = await props.searchParams;
+  const currSearchParamsString = `q:${searchParams?.q}, sort:${searchParams?.sort}, from ${searchParams?.sd} to ${searchParams?.ed}`;
+
+  const initialClips = await getClips(searchParams, 0, INITIAL_FETCH_SIZE);
+  const clipCount = await getClipCount(searchParams);
+  let initialClipIds = "";
 
   for (const clip of initialClips) {
-    initialClipsIds += clip.id + "\n";
+    initialClipIds += clip.id + "\n";
   }
 
-  console.log("Initial clip IDs:\n" + initialClipsIds);
-  console.log(params);
+  console.log("Initial clips:\n" + initialClipIds);
 
   return (
     <>
@@ -33,8 +34,8 @@ export default async function SearchPage({ searchParams }: {
 
       <SearchForm />
 
-      <Suspense fallback={ <Loader color="snails.4" /> }>
-        <SearchResults searchParams={params} initialClips={initialClips} key={initialClipsIds} />
+      <Suspense fallback={ <LoadingCircle /> }>
+        <SearchResults searchParams={searchParams} initialClips={initialClips} clipCount={clipCount} key={currSearchParamsString} />
       </Suspense>
     </>
   );

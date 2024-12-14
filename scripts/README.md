@@ -1,4 +1,4 @@
-# Scripts
+# Scripts for Twitch Clips
 
 Powershell scripts to automate getting clip data.
 

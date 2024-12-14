@@ -1,7 +1,7 @@
 <div align="center">
 ![FerretSoftware-Clips](image)
 <br>
-A Twitch Clip search tool, exclusively for the [FerretSoftware channel](https://www.twitch.tv/ferretsoftware). Search and filter by playgroups and ferret(s)!
+A Twitch Clip search tool, exclusively for the [FerretSoftware](https://www.twitch.tv/ferretsoftware) channel. Search and filter by playgroups and ferret(s)!
 </div>
 
 ### Built with
@@ -12,50 +12,19 @@ A Twitch Clip search tool, exclusively for the [FerretSoftware channel](https://
 - [Remix Icon](https://remixicon.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## Getting Started
+## Scripts and Snippets
 
-To get a local copy up and running, please follow these simple steps.
+### Twitch
 
-### Prerequisites
+To find out how to get Twitch clip data for FerretSoftware, see the [scripts/](scripts/) folder.
 
-Here is what you need to be able to run FerretSoftware Clips:
+### Supabase
 
-- Node.js (Version: >=18.x)
-- Pnpm *(recommended)*
-
-## Development
-
-### Setup
-
-1. Clone the repo into a public GitHub repository (or fork https://github.com/Rezinya/ferretsoftware-clips/fork).
-
-  ```sh
-  git clone https://github.com/Rezinya/ferretsoftware-clips.git
-  ```
-
-2. Go to the project folder
-
-  ```sh
-  cd ferretsoftware-clips
-  ```
-
-3. Install packages with pnpm
-
-  ```sh
-  pnpm install
-  ```
-
-4. Run the project
-
-  ```sh
-  pnpm dev
-
-  # Running on http://localhost:3000/
-  ```
+This website uses [Supabase](https://supabase.com/) for its backend. See the [app/lib/supabase/](app/lib/supabase/) folder for snippets used.
 
 ## Other Ways to Contribute
 
-The filter system is currently a work in progress! 
+I'm thinking of setting up a page that will show a clip's tags and allow people to submit additional tags for that clip. WIP.
 
 ## Licenses
 

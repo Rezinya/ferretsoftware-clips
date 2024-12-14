@@ -1,9 +1,7 @@
-import { Loader } from "@mantine/core";
+import LoadingCircle from "components/LoadingCircle";
 
 export default function Loading() {
   return (
-    <div className="loading">
-      <Loader color="snails.3" />
-    </div>
+    <LoadingCircle />
   );
 }

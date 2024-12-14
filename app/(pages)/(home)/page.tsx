@@ -1,4 +1,5 @@
 import { Title } from "@mantine/core";
+import Tips from "components/Layout/Home/Tips";
 import StatsSummary from "components/Layout/Home/StatsSummary";
 import FAQ from "components/Layout/Home/FAQ";
 
@@ -8,7 +9,7 @@ export default function HomePage() {
       <Title order={1} className="title">Welcome!</Title>
 
       <p>Here you can begin searching through the clips from the FerretSoftware channel!</p>
-      <p>The filter feature is a <strong>work in progress</strong> though. The community is working together to sort out the clips!</p>
+      <Tips />
 
       <Title order={2} className="sub-title">Stats</Title>
 

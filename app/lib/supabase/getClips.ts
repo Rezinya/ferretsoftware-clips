@@ -1,13 +1,12 @@
 "use server";
 
-import { supabase } from "lib/supabase/supabase";
+import { createClient } from "lib/supabase/client";
 import { SearchParams } from "lib/types";
 import { Tables } from "lib/types.database";
 
 export async function getClips(searchParams: SearchParams | undefined, offset: number, limit: number) {
-  if (!searchParams) {
-    return [];
-  }
+  if (!searchParams) { return []; }
+  const supabase = await createClient();
 
   // Sort type and sort order
   const sortOptions = (searchParams.sort) ? searchParams.sort.split("_") : ["views", "desc"];
@@ -22,40 +21,60 @@ export async function getClips(searchParams: SearchParams | undefined, offset: n
     .range(offset, offset + limit - 1);
 
   // Dates
-  if (searchParams.dateRange) {
+  if (searchParams.sd && searchParams.ed) {
     databaseQuery = databaseQuery
-    .gte("created_at", searchParams.dateRange.startDate)
-    .lte("created_at", searchParams.dateRange.endDate);
+      .gte("created_at", searchParams.sd)
+      .lte("created_at", searchParams.ed);
   }
 
-  if (searchParams.query?.length > 0 && !searchParams.query.includes("+")) {
-    // Search query is one word
-    databaseQuery = databaseQuery.textSearch("textsearchable_col", `'${searchParams.query}'`);
-  }
-  else if (searchParams.query?.length > 0 && searchParams.query.includes("+")) {
-    const queryWords = searchParams.query.split("+");
-    let formattedQuery = "";
-    let wordCount = queryWords.length;
-
-    // Create search query with format 'word1' | 'word2'...
-    for (const word of queryWords) {
-      if (!--wordCount) {
-        formattedQuery += `'${word}'`;
-      }
-      else {
-        formattedQuery += `'${word}' | `;
-      }
-    }
-
-    databaseQuery = databaseQuery.textSearch("textsearchable_col", formattedQuery);
+  // Query
+  if (searchParams.q?.length > 0) {
+    databaseQuery = databaseQuery.textSearch("textsearchable_col", searchParams.q, {
+      type: "websearch",
+      config: "english"
+    });
   }
 
   const { data, error } = await databaseQuery;
 
-  if (!error) {
-    return data as Tables<"clips">[];
-  }
-  else {
+  if (error) {
+    console.error(error);
     return [];
   }
+  
+  return data as Tables<"clips">[];
+}
+
+// Just returns count to keep track of how many "pages" to load
+export async function getClipCount(searchParams: SearchParams | undefined) {
+  if (!searchParams) { return 0; }
+  const supabase = await createClient();
+
+  let databaseQuery = supabase
+    .from("clips")
+    .select("*", { count: "exact", head: true });
+
+  // Dates
+  if (searchParams.sd && searchParams.ed) {
+    databaseQuery = databaseQuery
+      .gte("created_at", searchParams.sd)
+      .lte("created_at", searchParams.ed);
+  }
+
+  // Query
+  if (searchParams.q?.length > 0) {
+    databaseQuery = databaseQuery.textSearch("textsearchable_col", searchParams.q, {
+      type: "websearch",
+      config: "english"
+    });
+  }
+
+  const { count, error } = await databaseQuery;
+
+  if (error) {
+    console.error(error);
+    return 0;
+  }
+
+  return count as number;
 }

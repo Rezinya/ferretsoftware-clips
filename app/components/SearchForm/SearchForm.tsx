@@ -1,14 +1,14 @@
 "use client";
 
-import { FormEvent, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { FormEvent } from "react";
+import { useRouter } from "next/navigation";
 import { Button, Group, Select, TextInput } from "@mantine/core";
 import { DatePickerInput } from "@mantine/dates";
 import { useForm } from "@mantine/form";
 import { zodResolver } from "mantine-form-zod-resolver";
 import { RiCalendarLine, RiSearchLine } from "@remixicon/react";
 
-import { searchFormSchema, SearchParams } from "lib/types";
+import { searchFormSchema } from "lib/types";
 import classes from "components/SearchForm/SearchForm.module.scss";
 
 export default function SearchForm() {
@@ -19,12 +19,10 @@ export default function SearchForm() {
   const form = useForm({
     mode: "uncontrolled",
     initialValues: {
-      query: "",
+      q: "",
       sort: "views_desc",
-      dateRange: {
-        startDate: defaultStartDate,
-        endDate: todayDate,
-      }
+      sd: defaultStartDate,
+      ed: todayDate,
     },
     validate: zodResolver(searchFormSchema),
   });
@@ -33,13 +31,13 @@ export default function SearchForm() {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
   
-    const query = form.getValues().query.trim().replace(" ", "+");
+    const query = form.getValues().q.trim().replace(" ", "+");
     const sort = form.getValues().sort;
-    const startDate = form.getValues().dateRange?.startDate 
-      ? form.getValues().dateRange?.startDate.toISOString().substring(0, 10)
+    const startDate = form.getValues().sd 
+      ? form.getValues().sd.toISOString().substring(0, 10)
       : undefined;
-    const endDate = form.getValues().dateRange?.endDate 
-      ? form.getValues().dateRange?.endDate.toISOString().substring(0, 10)
+    const endDate = form.getValues().ed 
+      ? form.getValues().ed.toISOString().substring(0, 10)
       : undefined;
   
     const queryPath = (startDate && endDate) 
@@ -47,36 +45,34 @@ export default function SearchForm() {
       : `/search?q=${encodeURIComponent(query)}&sort=${sort}`;
   
     router.push(queryPath);
+    router.refresh();
   }
 
   // If Search page was loaded with query, fill form values
-  /* (Currently causing "too many re-renders" error)
-  * if (searchParams && !form.isDirty()) {
-  *   if (searchParams.dateRange?.startDate && searchParams.dateRange.endDate) {
-  *     form.setValues({
-  *       query: searchParams.query ?? "",
-  *       sort: searchParams.sort ?? "views_desc",
-  *       dateRange: {
-  *         startDate: dayjsExtended(searchParams.dateRange.startDate).toDate(),
-  *         endDate: dayjsExtended(searchParams.dateRange.endDate).toDate(),
-  *       }
-  *     });
-  *   }
-  *   else {
-  *     form.setValues({
-  *       query: searchParams.query ?? "",
-  *       sort: searchParams.sort ?? "views_desc",
-  *     });
-  *   }
-  * }
-  **/
+//  (Currently causing "too many re-renders" error)
+//  if (searchParams && !form.isDirty()) {
+//    if (searchParams.dateRange?.startDate && searchParams.dateRange.endDate) {
+//      form.setValues({
+//        query: searchParams.query ?? "",
+//        sort: searchParams.sort ?? "views_desc",
+//        startDate: dayjsExtended(searchParams.startDate).toDate(),
+//        endDate: dayjsExtended(searchParams.endDate).toDate(),
+//      });
+//     }
+//     else {
+//       form.setValues({
+//         query: searchParams.query ?? "",
+//         sort: searchParams.sort ?? "views_desc",
+//       });
+//     }
+//   }
 
   return (
     <form onSubmit={handleSubmit} role="search">
       <div className={classes["form-inputs"]}>
         <TextInput
-          {...form.getInputProps("query") }
-          key={form.key("query")}
+          {...form.getInputProps("q") }
+          key={form.key("q")}
           label="Enter names or keywords"
           placeholder="Search"
           leftSectionPointerEvents="none"
@@ -104,8 +100,8 @@ export default function SearchForm() {
 
       <Group mt="md">
         <DatePickerInput
-          {...form.getInputProps("dateRange.startDate") }
-          key={form.key("dateRange.startDate")}
+          {...form.getInputProps("sd") }
+          key={form.key("sd")}
           label="Start date:"
           placeholder="Pick start date"
           minDate={defaultStartDate}
@@ -119,8 +115,8 @@ export default function SearchForm() {
         />
 
         <DatePickerInput
-          {...form.getInputProps("dateRange.endDate") }
-          key={form.key("dateRange.endDate")}
+          {...form.getInputProps("ed") }
+          key={form.key("ed")}
           label="End date:"
           placeholder="Pick end date"
           minDate={defaultStartDate}
