@@ -20,13 +20,6 @@ export default async function SearchPage(props: { searchParams?: Promise<SearchP
 
   const initialClips = await getClips(searchParams, 0, INITIAL_FETCH_SIZE);
   const clipCount = await getClipCount(searchParams);
-  let initialClipIds = "";
-
-  for (const clip of initialClips) {
-    initialClipIds += clip.id + "\n";
-  }
-
-  console.log("Initial clips:\n" + initialClipIds);
 
   return (
     <>

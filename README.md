@@ -1,7 +1,7 @@
 <div align="center">
 ![FerretSoftware-Clips](image)
 <br>
-A Twitch Clip search tool, exclusively for the [FerretSoftware](https://www.twitch.tv/ferretsoftware) channel. Search and filter by playgroups and ferret(s)!
+A Twitch Clip search tool, exclusively for the <a href="https://www.twitch.tv/ferretsoftware">FerretSoftware channel</a>. Search and filter by playgroups and ferret(s)!
 </div>
 
 ### Built with
