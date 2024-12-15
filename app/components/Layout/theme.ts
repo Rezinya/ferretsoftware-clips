@@ -12,7 +12,7 @@ import {
   Drawer
 } from "@mantine/core";
 
-import { bodyFont, handwrittenFont, titleFont } from "components/Layout/fonts";
+import { bodyFont, titleFont } from "components/Layout/fonts";
 import classes from "styles/mantine.module.scss";
 
 const brown: MantineColorsTuple = [

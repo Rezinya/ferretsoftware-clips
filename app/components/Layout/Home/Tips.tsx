@@ -9,7 +9,7 @@ export default function Tips() {
         <li>To find clips containing BOTH (or more) keywords, use the <Code>&</Code> symbol between each word</li>
         <li>To find clips containing ANY keywords, use the <Code>|</Code> symbol between each word</li>
         <li>To exclude a word, use the <Code>!</Code> symbol right before the word</li>
-        <li><Code>"quoted text"</Code> is also supported to search for phrases</li>
+        <li><Code>&quot;quoted text&quot;</Code> is also supported to search for phrases</li>
       </ul>
 
       <p>Additional notes:</p>

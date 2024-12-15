@@ -29,14 +29,6 @@ export default function SearchResults({ searchParams, initialClips, clipCount }:
   const loadMoreClips = async () => {
     const newClips = await getClips(searchParams, offset, FETCH_SIZE);
 
-    let newClipsString = "";
-
-    for (const clip of initialClips) {
-      newClipsString += clip.id + "\n";
-    }
-
-    console.log("Loading new clips...\n" + newClipsString);
-
     setClips((clips) => [...clips, ...newClips]);
     setOffset((offset) => offset + FETCH_SIZE);
   };
@@ -45,6 +37,7 @@ export default function SearchResults({ searchParams, initialClips, clipCount }:
     if (entry?.isIntersecting && (offset < clipCount)) {
       loadMoreClips();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry, offset, clipCount]);
 
   return (
