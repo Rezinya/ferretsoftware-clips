@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-
 import { dayjsExtended } from "lib/dayjs";
 import { Tables } from "lib/types.database";
 import classes from "components/Clip/Clip.module.scss";
@@ -12,7 +10,7 @@ export default function Clip({ clip }: {
     <div className={classes.wrapper}>
       <div className={classes["clip-thumbnail"]}>
         <Link href={clip.url}>
-          <Image
+          <img
             src={clip.thumbnail_url}
             sizes="100vw"
             style={{

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { ActionIcon, Tooltip, useMantineColorScheme } from "@mantine/core";
 import { useMounted } from "@mantine/hooks";
 
@@ -26,7 +25,7 @@ export default function GitHubButton({ link, size, radius }: {
         label="Source code"
         transitionProps={{ transition: "pop", duration: 500 }}
       >
-        <Image
+        <img
           src={ isLight ? "/github-mark.png" : "/github-mark-white.png" }
           width={30}
           height={30}

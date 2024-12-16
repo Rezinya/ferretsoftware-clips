@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Burger, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -51,7 +50,7 @@ export default function Header() {
           />
 
           <Link href="/" className={classes.title}>
-            <Image
+            <img
               src="/ferretsoftware-clips.png"
               width={42}
               height={42}

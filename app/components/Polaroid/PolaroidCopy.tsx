@@ -1,8 +1,5 @@
-import Image from "next/image";
 import { RiMenLine, RiWomenLine } from "@remixicon/react";
-
 import { handwrittenFont } from "components/Layout/fonts";
-import KodaPhoto from "assets/koda_202408.webp";
 import styles from "components/Polaroid/Polaroid.module.scss";
 
 // Copy of Polaroid component used in the About page
@@ -15,8 +12,8 @@ export default function Polaroid({ name, sex }: {
   return (
     <div className={styles.wrapper}>
       <div className={styles.film}>
-        <Image
-          src={KodaPhoto}
+        <img
+          src="assets/koda_202408.webp"
           sizes="100vw"
           style={{
             width: "100%",
@@ -24,7 +21,6 @@ export default function Polaroid({ name, sex }: {
           }}
           alt={description}
           className={styles["film-image"]}
-          placeholder="blur"
         />
         <div className={styles["label"]}>
           <span className={`${handwrittenFont.className} ${styles["label-name"]}`}>
