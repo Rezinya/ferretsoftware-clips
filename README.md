@@ -1,5 +1,5 @@
 <div align="center">
-![FerretSoftware-Clips](image)
+<img src="public/ferretsoftware-clips-header.png" />
 <br>
 A Twitch Clip search tool, exclusively for the <a href="https://www.twitch.tv/ferretsoftware">FerretSoftware channel</a>. Search and filter by playgroups and ferret(s)!
 </div>
