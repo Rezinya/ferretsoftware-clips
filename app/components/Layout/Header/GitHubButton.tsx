@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ActionIcon, px, Tooltip, useMantineColorScheme } from "@mantine/core";
+import { ActionIcon, Tooltip, useMantineColorScheme } from "@mantine/core";
 import { useMounted } from "@mantine/hooks";
 
 export default function GitHubButton({ link, size, radius }: {
@@ -12,7 +12,6 @@ export default function GitHubButton({ link, size, radius }: {
 }) {
   const isLight = useMantineColorScheme().colorScheme === "light";
   const isMounted = useMounted();
-  const pxSize = px(size) as number;
 
   return isMounted ? (
     <ActionIcon
@@ -29,8 +28,8 @@ export default function GitHubButton({ link, size, radius }: {
       >
         <Image
           src={ isLight ? "/github-mark.png" : "/github-mark-white.png" }
-          width={pxSize}
-          height={pxSize}
+          width={30}
+          height={30}
           alt="GitHub"
         />
       </Tooltip>

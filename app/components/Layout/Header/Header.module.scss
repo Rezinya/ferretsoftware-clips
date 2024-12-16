@@ -8,15 +8,15 @@
 
 .wrapper {
   max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: var(--viewport-padding);
+  margin: 0 auto;
+  padding: 0 var(--viewport-padding);
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 0.5rem;
+  padding: calc(var(--mantine-spacing-md) / 2) 0;
 }
 
 .title {
@@ -26,7 +26,7 @@
 
   &-text {
     font-size: var(--mantine-font-size-xl);
-    padding-inline: var(--mantine-font-size-xs);
+    padding: 0 var(--mantine-font-size-xs);
 
     @media (max-width: 30em) {
       display: none;

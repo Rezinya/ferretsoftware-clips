@@ -112,7 +112,7 @@ p {
 .title {
   font-size: var(--mantine-h1-font-size);
   font-weight: var(--mantine-h1-font-weight);
-  margin-block: 0.5em 0.7em;
+  margin: var(--mantine-spacing-xs) 0 var(--mantine-spacing-lg) !important;
 }
 
 .sub-title {
@@ -125,7 +125,7 @@ p {
     rgba(252, 132, 131, 1),
     rgba(87, 39, 22, 0.2));
   border-image-slice: 1;
-  margin-block: 0.85em;
+  margin: var(--mantine-spacing-lg) 0 var(--mantine-spacing-md) !important;
 }
 
 /* Page Layout ----- */
@@ -148,7 +148,7 @@ p {
       min(calc(var(--max-width) - var(--viewport-padding) * 2), calc(100% - var(--viewport-padding) * 2))
       1fr;
     justify-content: center;
-    margin-block: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
+    margin: var(--mantine-spacing-lg) 0 var(--mantine-spacing-xl);
   }
 }
 
@@ -172,7 +172,7 @@ p {
     font-size: var(--mantine-h2-font-size);
     font-weight: var(--mantine-h2-font-weight);
     color: var(--mantine-color-custom-0);
-    margin-block: 0.85em;
+    margin: var(--mantine-spacing-lg) 0 var(--mantine-spacing-md);
   }
 
   &-text{
@@ -180,6 +180,6 @@ p {
   }
 
   &-button {
-    margin-block: var(--mantine-spacing-md);
+    margin: var(--mantine-spacing-md) 0;
   }
 }

@@ -8,15 +8,15 @@
 
 .wrapper {
   max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: var(--viewport-padding);
+  margin: 0 auto;
+  padding: 0 var(--viewport-padding);
 }
 
 .footer {
   font-size: var(--mantine-font-size-xs);
-  padding-block: var(--mantine-spacing-xl) var(--mantine-spacing-lg);
+  padding: var(--mantine-spacing-xl) 0;
 
   &-text {
-    margin-bottom: 0.3em;
+    margin-bottom: calc(var(--mantine-font-size-xs) / 3);
   }
 }
