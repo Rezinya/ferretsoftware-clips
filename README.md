@@ -2,6 +2,8 @@
 <img src="public/ferretsoftware-clips-header.png" />
 <br>
 A Twitch Clip search tool, exclusively for the <a href="https://www.twitch.tv/ferretsoftware">FerretSoftware channel</a>. Search and filter by playgroups and ferret(s)!
+<br>
+Currently being hosted at https://ferretsoftware-clips.vercel.app/
 </div>
 
 ### Built with
