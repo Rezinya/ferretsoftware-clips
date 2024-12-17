@@ -13,10 +13,13 @@ export async function getClips(searchParams: SearchParams | undefined, offset: n
   const sortType = (sortOptions[0] === "views") ? "view_count" : "created_at";
   const isAscending = (sortOptions[1] === "asc") ? true : false;
 
-  // Default database query
-  let databaseQuery = supabase
-    .from("clips")
-    .select("*")
+  // Query
+  let databaseQuery = (searchParams.q?.length > 0)
+    ? supabase.rpc("clips_search", { query: searchParams.q })
+    : supabase.from("clips").select("*");
+
+  // Add sort and range
+  databaseQuery = databaseQuery
     .order(sortType, { ascending: isAscending })
     .range(offset, offset + limit - 1);
 
@@ -25,14 +28,6 @@ export async function getClips(searchParams: SearchParams | undefined, offset: n
     databaseQuery = databaseQuery
       .gte("created_at", searchParams.sd)
       .lte("created_at", searchParams.ed);
-  }
-
-  // Query
-  if (searchParams.q?.length > 0) {
-    databaseQuery = databaseQuery.textSearch("textsearchable_col", searchParams.q, {
-      type: "websearch",
-      config: "english"
-    });
   }
 
   const { data, error } = await databaseQuery;
