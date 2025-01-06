@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import '@mantine/charts/styles.css';
@@ -37,6 +38,7 @@ export default function RootLayout({
               <div className="content-wrapper">
                 <main className="main">
                   {children}
+                  <Analytics />
                 </main>
               </div>
             </div>

@@ -17,6 +17,7 @@
     "@remixicon/react": "^4.5.0",
     "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.46.1",
+    "@vercel/analytics": "^1.4.1",
     "dayjs": "^1.11.13",
     "mantine-form-zod-resolver": "^1.1.0",
     "next": "15.0.3",
